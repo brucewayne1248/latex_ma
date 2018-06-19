@@ -1,0 +1,145 @@
+% LaTeX Vorlage für studentische Arbeiten am imes, MZH, ...
+% Vorlagenversion vom 15.08.2017
+%
+%
+%
+%
+%
+% META & VOREINSTELLUNGEN -------------------------------------------------------
+\newcommand{\Autor}%                % Name des Autors / der Autorin
+{Andreas Serov}
+\newcommand{\Matrikelnummer}%       % Matrikelnummer
+{2871560}
+\newcommand{\Datum}%       % Abgabedatum
+{30. September 2018}
+
+% ------------------------------------------------------------------------------------------
+% erlaubt das Anfangen des Draft-Modus und damit Veränderungen
+% einzustellen
+\newif\ifdraft
+% Draft-Modus: Arbeitsversion, Bilder werden nur als Rahmen dargestellt
+% Vorteil: schnelleres Kompilieren
+%\drafttrue % <- dafür hier die Kommentierung wegnehmen
+
+%-------------------------------------------------------------------------------------------
+% folgende Befehle sorgen dafür, das für jede Schrift die richtigen Pakete installiert werden
+\newcounter{schrift}
+% Schrift auswählen:
+% 1 - mathptmx
+% 2 - minionpro
+% 3 - mathpazo
+% 4 - times + computer modern
+% 5 - computer modern
+\setcounter{schrift}{4} % Hier die entsprechende Zahl setzen !
+
+% ------------------------------------------------------------------------------------------
+\input{dateien/praeambel}                  % Präambel zur Dokumentenformatierung einfügen
+                                            % braucht nicht zu verändert werden, stehen aber nützliche
+                                            % Hinweise drin
+
+%---------------------------------------------------------------
+% Trennmuster fuer Ausnahmefälle
+%---------------------------------------------------------------
+\hyphenation{} % z.B. \hypenation{Trenn-text}
+\hyphenation{Kraft-ein-wirk-ung}
+\hyphenation{ein-ge-spannt}
+\hyphenation{Coch-lea-im-plan-ta-te}
+\hyphenation{Deh-nungs-mess-streifen}
+
+%---------------------------------------------------------------
+% Dokumentenanfang:
+%---------------------------------------------------------------
+% Einstellungen für PDF-Latex:
+% Hier Titel etc. eintragen, dann wird es in den Dokumenteneigenschaften vom PDF richtig angezeigt
+\ifpdf
+    \hypersetup{
+    %   colorlinks,  % Links mit farbigem Text
+        pdftitle    = {Kinematikmodellierung eines Multibackbone Kontinuumroboters mittels Maschinellem Lernen},
+        pdfsubject  = {Masterarbeit},
+        pdfauthor   = {\Autor},
+        pdfkeywords = {Kontinuumsrobotik, Kinematik, Maschinelles Lernen}
+        }
+\else
+\fi
+
+\usepackage{dateien/befehle}				% eigene Befehle wie:
+                                            % \zB\,
+                                            % \abbildung{Position h,b,t,p}{Dateiname ohne Endung}{Caption}
+                                            % \bild{Dateiname}, referenziert gemäß ...Bild x.xx...
+                                            % einfach mal nachschauen was so drin ist und eigene Befehle für
+                                            % wiederholende Sachen definieren
+
+%\includeonly{dateien/kinematik}             % wenn nur ein Kapitel kompilliert werden soll
+                                            % geht schneller wenn man nur das Layout des Kapitels sehen will
+
+%\entwurf                                   % Entwurfsdatum auf jede Seite setzen,
+                                            % nicht vergessen beim Druck rauszunehmen
+%\setlength\overfullrule{5pt}                % Overfull boxes werden angezeigt
+%\setlength\underfullrule{5pt} 
+
+% Seitenspiegel neu berechnen
+\typearea[current]{last}
+\begin{document}                            % Dokumentenanfang
+\dominitoc
+\begin{spacing}{1.15}                       % Zeilenabstand auf 1,15 fach stellen, ist nicht so eng aber
+                                            % auch nicht so eine Seitenschinderei wie 1,5-fach
+    \frontmatter                            % mit kleinen römischen Seitenzahlen beginnen für class scrbook
+    %\pagenumbering{roman}                  % das gleiche fücrartcl
+    \setcounter{page}{0}
+    \pdfbookmark[0]{Titel}{tit}             % damit der Titel auch im Acrobat angezeigt wird
+		\include{dateien/cover} %Titelseite
+		\include{dateien/selbst} % Selbstständigkeitserklärung
+    \clearpage
+		%\includepdf{dateien/aufgabenstellung.pdf} % Aufgabenstellung als pdf einbinden
+		\include{dateien/aufgabenstellung} % Aufgabenstellung aus LaTeX nutzen
+		\include{dateien/kurzfassung}
+    \setcounter{page}{1}
+    \pdfbookmark[0]{\contentsname}{toc}
+    \tableofcontents                        % Inhaltsverzeichnis
+    %\listoffigures
+    %\listoftables
+		\input{dateien/nomenklatur}           % Beschreibungen der verwendeten Abkürzungen und Variablen
+    \mainmatter                             % der eigentliche Tex
+    \setcounter{page}{1} % bei i anfangen
+  	 	%\input{dateien/einleitung}										% die einzelnen Kapitel einbinden
+		\input{dateien/standdertechnik}
+		\input{dateien/kinematik}
+		%\input{dateien/tipps}
+		%\input{dateien/vorlage_betreuer}
+		%\input{dateien/robotersysteme}
+
+    %\nocite{*}                             % alle Literaturquellen einbinden, sonst werden nur die zitierten
+                                            % Quellen im Literaturverzeichnis angezeigt (ist Geschmackssache).
+                                            % eher nicht verwenden, außer man hat einen guten Grund
+    \appendix                               % Anhang starten, jedes weitere Kapitel bekommt jetzt einen Buchstaben
+    \chapter*{Anhang}                       % Anhang als Chapter1
+    \thispagestyle{empty}                   % keine Kopfzeile, Seitenzahl u.a., leere Seite mit Überschrift Anhang
+    \setcounter{chapter}{1}                 % Chapter Counter auf 1 = im Anhang A
+    \setcounter{equation}{0}                % Equation Counter nullen
+    \addstarredchapter{Anhang}              % Minitoc mitteilen, dass neues Chapter
+    \newpage                                
+    \ihead{\normalfont Anhang}              % Kopfzeile auf Anhang setzen
+    
+    \minitoc                                % Anhangsverzeichnis plotten
+
+
+
+    %% --- Ab hier der Anhang einfügen
+
+    %\include{anhang_wheatstone}            % Anhang
+    %\include{anhang_fehlerfortpflanzung}
+		%\include{anhang_mgcEinstellungen}
+		%\include{anhang_trafos}
+		%\include{anhang_befestigen}
+		%\include{anhang_datenblaetter}
+    %% --- Anhang zu Ende
+		
+    \ihead{\normalfont\headmark}            % kolumnentitel innen
+ 
+    %% --- Literaturverzeichnis
+    \bibliographystyle{alphadin}            % Darstellung nach DIN, mit Name und Jahr z.B. [Sch06]
+    %\bibliography{dateien/masterbib}       % Literaturverzeichnis einbinden
+	\bibliography{dateien/masterarbeit_serov}
+\end{spacing}
+\end{document}                              % fertig!
+

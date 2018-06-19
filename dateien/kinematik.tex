@@ -1,0 +1,157 @@
+\chapter{Modellierung der direkten Kinematik}
+
+In diesem Kapitel wird die direkte Kinematik eines seilzugaktuierten Kontinuumroboters bestehend aus zwei Abschnitten aufgestellt. Im Allgemeinen bezeichnet die direkte Kinematik 
+%
+\begin{equation}
+\label{eq:direkteKinematik}
+f(\bm{q}) = \bm{x}_\mathrm{E}
+\end{equation}
+%
+den geometrischen Zusammenhang zwischen den $m$ Gelenkwinkeln $\bm{q} = \left[q_1, q_2, ..., q_m \right]^\transpose $ des Roboters und der daraus resultierenden Position und Lage Endeffektors~$\bm{x}_\mathrm{E}$.
+%$\bm{x}_\mathrm{E} = \left[x_\mathrm{E}, y_\mathrm{E}, z_\mathrm{E}, \phi_\mathrm{E}, \psi_\mathrm{E}, \theta_\mathrm{E} \right]^\transpose $. Hierbei entspricht $m$ der Anzahl der Gelenkwinkel und $\bm{x}_\mathrm{E}$ den kartesischen Raumkoordinaten sowie der Orientierung des Endeffektors. Die Orientierung ist hier zunächst durch die Verwendung von drei Winkeln $\phi_\mathrm{E}, \psi_\mathrm{E}$ und $\theta_\mathrm{E}$ dargestellt. 
+Die direkte Kinematik lässt sich auf die Gelenkwinkelgeschwindikeiten $f(\bm{\dot{q}}) = \bm{\dot{x}}_\mathrm{E} $ und -beschleunigungen $f(\bm{\ddot{q}}) = \bm{\ddot{x}}_\mathrm{E}$ erweitern. Im späteren Verlauf dieser Arbeit wird die inverse Kinematik
+%
+\begin{align}
+f^{-1}(\bm{x}_\mathrm{E}) = \bm{q},
+\label{eq:inverseKinematik}
+\end{align}
+
+\begin{figure}[b]
+\centering
+\begin{tikzpicture}[auto, node distance=2cm, line width=2pt]
+% Zeichne Blöcke mit innerem Text
+\node[name=center] {};
+\node[simplebox, minimum size=1.5cm, left of=center, name=q, color=imesblue, label={[align=center]:Gelenk-\\ winkel}] {\textblack{$\bm{q}$}};
+\node[simplebox, minimum size=1.5cm, right of=center, name=x, label={[align=center]:Position,\\ Lage}] {\textblack{$\bm{x}_\mathrm{E}$}};
+% berechne Punkte für verschobene Linien zwischen Boxen
+\path (q.east) -- (q.north east) coordinate[pos=0.5] (q1);
+\path (q.east) -- (q.south east) coordinate[pos=0.5] (q2);
+\path (x.west) -- (x.north west) coordinate[pos=0.5] (x1);
+\path (x.west) -- (x.south west) coordinate[pos=0.5] (x2);
+%Zeichne Verbindungen
+\draw[simplearrow] (q1) to node [align=center] {\textblack{$f(\bm{q})$}}      (x1);
+\draw[simplearrow] (x2) to node [align=center] {\textblack{$f^{-1}(\bm{x}_\mathrm{E})$}} (q2);
+
+\end{tikzpicture}
+\caption{Grafische Darstellung der direkten und inversen Kinematik}
+\label{fig:kinematik}
+\end{figure}
+
+welche eine gegebene Lage und Orientierung im Arbeitsraum Gelenkwinkel zuordnet, ermittelt. Die Beziehung zwischen der direkten und inversen Kinematik ist in \abb{fig:kinematik} grafisch dargestellt. 
+
+Im Gegensatz zu seriellen Robotern mit starren Strukturen besitzen Kontinuumsroboter ein nachgiebiges Glied, welches sich kontinuierlich unter dem Einfluss von Kräften krümmt. Für die Modellierung der direkten Kinematik wird die Annahme getroffen, dass der Kontinuumroboter in jedem Abschnitt eine stückweise konstante Krümmung annimmt. Damit lässt sich die Form jedes Abschnitts mithilfe eines Kreisbogens beschreiben. Dies ermöglicht weiterhin die Kinematik von Kontinuumrobotern in einen roboterspezifischen und einen roboterunabhängigen Zusammenhang aufzuteilen \cite{WIJ10}. Unter Verwendung der Gelenkwinkel ermittelt die roboterspezifische Funktion
+%
+\begin{align}
+f_{\mathrm{s}}(\bm{q}) = [\kappa, \phi, l]^\transpose
+\label{eq:fspezifisch}
+\end{align}
+
+die sogenannten Bogenparameter im Konfigurationsraum. Es sind $\kappa$ die Krümmung eines stückweise konstant gekrümmten Abschnitts des Kontinuumroboters, $\phi$ der Winkel der Ebene, in welcher der Kreisbogen liegt, und $l$ die Länge des Kreisbogens. Um sämtliche Punkte auf dem Kreisbogen beschreiben zu können, wird die variable Bogenlänge $s \in [0~l]$ eingeführt. Analog zu \eqref{eq:inverseKinematik} lässt sich auch die inverse Abbildung
+%
+\begin{align}
+f^{-1}_{\mathrm{s}}(\kappa, \phi, l) = \bm{q}
+\label{eq:fspezifischinvers}
+\end{align}
+
+vom Konfigurationsraum zum Gelenkraum definieren. Der roboterunabhängige Zusammenhang 
+%
+\begin{align}
+f_{\text{u}}(\kappa, \phi, l) = \bm{x}_\mathrm{E}
+\label{eq:funabhängig}
+\end{align}
+
+bildet über die Bogenparameter den Konfigurationsraum auf den Arbeitsraum ab. Der Zusammenhang zwischen den roboterspezifischen und -unabhängigen Abbildungen ist in~\abb{fig:kinematikraeume} zu sehen. In den folgenden Unterkapiteln wird zunächst die roboterunabhängige und dann die roboterspezifische Kinematik von einem konstant gekrümmten Abschnitt für einen seilzugaktuierten Kontinuumsroboter aufgestellt. Mit den gewonnenen Ergebnissen kann im Anschluss über die Kopplung zweier homogener Transformationen die Kinematik auf zwei Abschnitte erweitert werden. \\
+
+ 
+\begin{figure}[b] % 
+\centering
+\begin{tikzpicture}[auto, node distance=4cm]
+% Erzeuge Boxen mit innerem Text
+\node[simplebox, minimum size=1.5cm, name=arcparams, label={[align=center]:Bogen-\\ parameter}, label={[align=center]below:Konfigurations-\\ raum}] {\textblack{$\kappa, \phi, l$}};
+\node[simplebox, minimum size=1.5cm, node distance=5cm, left of=center, name=q, label={[align=center]:Seil-\\ längen}, label={[align=center]below:Gelenk-\\ raum}] {\textblack{$\bm{q}$}};
+\node[simplebox, minimum size=1.5cm, node distance=5cm, right of=center, name=x, label={[align=center]:Position,\\ Orientierung}, label={[align=center]below:Arbeits-\\ raum}] {\textblack{$\bm{x}_\mathrm{E}$}};
+% berechne Punkte für verschobene Linien zwischen Boxen
+\path (arcparams.east) -- (arcparams.north east) coordinate[pos=0.5] (arcparamsright1);
+\path (arcparams.east) -- (arcparams.south east) coordinate[pos=0.5] (arcparamsright2);
+\path (arcparams.west) -- (arcparams.north west) coordinate[pos=0.5] (arcparamsleft1);
+\path (arcparams.west) -- (arcparams.south west) coordinate[pos=0.5] (arcparamsleft2);
+\path (q.east) -- (q.north east) coordinate[pos=0.5] (q1);
+\path (q.east) -- (q.south east) coordinate[pos=0.5] (q2);
+\path (x.west) -- (x.north west) coordinate[pos=0.5] (x1);
+\path (x.west) -- (x.south west) coordinate[pos=0.5] (x2);
+% zeichne Pfeile zwischen den Boxen
+\draw[simplearrow] (q1) to node [align=center] {\textblack{$f_{\text{s}}(\bm{q})$}}      (arcparamsleft1);
+\draw[simplearrow] (arcparamsleft2) to node [align=center] {\textblack{$f^{-1}_{\text{s}}(\kappa, \phi, l)$}} (q2);
+\draw[simplearrow] (x2) to node [align=center] {\textblack{$f^{-1}_{\text{u}}(\bm{x}_\mathrm{E})$}}      (arcparamsright2);
+\draw[simplearrow] (arcparamsright1) to node [align=center] {\textblack{$f_{\text{u}}(\kappa, \phi, l)$}} (x1);
+
+\end{tikzpicture}
+\caption[Grafische Darstellung der unterschiedlichen Arbeitsräume eines Kontinuumsroboters]{Grafische Darstellung der unterschiedlichen Arbeitsräume eines Kontinuumsroboters in Anlehnung an \cite{WIJ10}}
+\label{fig:kinematikraeume}
+\end{figure}
+
+\section{Die roboterunabhängige Kinematik}
+\label{sec:unabhängigeKinematik}
+
+Erkläre hier, dass $f^{-1}_\mathrm{s}$ von Bogenparametern zu Seillängen bekannt ist~\cite{JW06}.
+
+
+INSERT GRAPHIC HERE VON WEGEN MIT EINEM KREISBOGEN UND DEN PARAMETERN UND DEN KOORDINATEN
+\section{Die roboterspezifische Kinematik}
+\label{sec:spezifischeKinematik}
+
+Die roboterspezifische Kinematik stellt einen Zusammenhang zwischen den Bogenparametern im Konfigurationsraum und den entsprechenden Gelenkwinkeln im Gelenkraum her. Die auf die Roboterstruktur wirkenden Kräfte und Momente der Aktuatoren sind für die tatsächliche Formgebung relevant. Über eine Untersuchung der auf den Roboter wirkenden Kräfte und Momente kann im Allgemeinen die roboterspezifische Funktion~\eqref{eq:fspezifisch} ermittelt werden. Für den hier betrachteten seilzugaktuierten Kontinuumsroboter werden folgende Vereinfachungen für die Modellierung der roboterspezifischen Kinematik getroffen:
+
+\begin{itemize}
+\item Vernachlässigung von Torsion,
+\item keine transversale Spannung,
+\item keine Berücksichtigung von Reibeffekten,
+\item Vernachlässigung des Einflusses der Schwerkraft,
+\item Annahme eines konstanten Drehmoments entlang eines Roboterabschnitts.
+\end{itemize}
+
+Durch die getroffenen Annahmen lässt sich die roboterspezifische Kinematik mittels einer geometrischen Betrachtung der Roboterstruktur herleiten. 
+
+Im Zusammenhang mit der Annahme von konstant gekrümmten Abschnitten wird die Vereinfachung getroffen, dass ein konstantes Drehmoment entlang eines Abschnitts wirkt. In~\cite{JW06} ist eine detaillierte, geometrische Herleitung der roboterspezifischen Kinematik vorzufinden. 
+
+Diese sind für jeden Kontinuumsroboter einzigartig und werden durch das Design bestimmt. Im Rahmen dieser Arbeit wird die Kinematik für einen seilzugaktuierten Kontinuumsroboter bestehend aus zwei Abschnitten modelliert. Pro Abschnitt sind drei Seile, die um das zentrale Rückgrat angebracht sind, formgebend. Durch Veränderungen der Seillängen wird die Form des jeweiligen Abschnitts verändert und das Rückgrat verbiegt sich. Die Verbiegung des ersten Abschnitts verläuft hierbei in einer zur Roboterbasis parallelen Ebene. 
+
+In~\abb{fig:} sind verschiedene Arten und Weisen von Seilführungen durch mehrere Abschnitte illustriert. Hierbei stellt die ineinander geführte Variante die einfachste Form der Seilführung dar, denn in diesem Fall sind die Seillängen im Abschnitt mit fernen und nahen Seillängen jeweils gleich. Die koradiale und verteilte Seilführung sind komplexer. Für die koradiale Seilführung müssen unterschiedliche Abstände $d_j$ vom Rückgrat zu den Seilen beachtet werden. Eine weitere Art der Seilführung kann verteilt stattfinden. In \cite{JW06a} wird die Kinematik eines rüsselartigen Kontinuumsroboters, dessen Seile verteilt geführt werden, untersucht. Die Autoren zeigen auf, dass der Einfluss der fernen und nahen Seillängen bei der verteilten Führung untereinander nicht vernachlässigt werden kann. Sie führen einen "wirr/entwirr"-Algorithmus ein, um den Einfluss der Seilführungen des nahen und fernen Abschnitts zu berücksichtigen. Im Rahmen dieser Arbeit wird der Kontinuumsroboter durch ineinander geführte Seile modelliert. Desweiteren wird ein gegenseitiger Einfluss der Seillängen auf unterschiedliche Abschnitte nicht berücksichtigt. \\
+
+INSERT GRAPHIC HERE \\
+
+Im Allgemeinen wird die $i$-te Seillänge des $j$-ten Segments als $l_{j,i}$ definiert. Wird ein Kontinuumsroboter mit nur einem Segment betrachtet ergeben sich die Gelenkwinkel zu
+%
+\begin{align*}
+\bm{q} = [l_{1,1}, l_{1,2}, l_{1,3}]^\transpose.
+\end{align*}
+
+
+
+Im Rahmen dieser Arbeit wird angenommen, dass die Seillängen nebeneinander geführt werden. 
+
+
+Die Ausrichtung eines Kontinuumsroboter mit $j$ Segmenten und $i$ Seillängen pro Segment ist durch die allgemeinen Gelenkwinkel
+%
+\begin{align*}
+\bm{q} = [\Delta l_{1,1},~...~,\Delta l_{1,i},~...~,\Delta l_{j,1},~...~, \Delta l_{j,i} ]^\transpose
+\end{align*}
+
+definiert, wobei $\Delta l_{j,i} = l_{j,i}-l_j$ gilt. 
+Für die Aktuierung des $i$-ten Segments werden im Allgemeinen drei Seillängen $\Delta l_{i,1}, \Delta l_{i,2}, \Delta l_{i,3}$ betrachtet. 
+
+
+\section{Erweiterung der Kinematik auf zwei Abschnitte}
+\label{sec:erweiterungKinematik}
+
+\begin{figure}
+\def\svgwidth{\linewidth}
+\input{bilder/kinematik/drawing.pdf_tex}
+\caption{testbild}
+\end{figure}
+
+
+
+
+
+\vspace{2cm} Ein Zitat wird benötigt sonst meckert hier jemand \cite{Li17}.

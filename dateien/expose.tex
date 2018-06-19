@@ -1,0 +1,37 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=1.25cm,bottom=2cm]{geometry}
+\author{Andreas Serov}
+\setlength{\parindent}{0pt} % keine einrückenden Absätze
+\title{Exposé}
+\begin{document}
+\begin{center}
+\begin{Large}
+Kinematikmodellierung eines Multibackbone Kontinuumroboters\\ mittels Maschinellem Lernen\\
+\end{Large}
+Exposé zur Masterarbeit von Andreas Serov, \today
+\end{center}
+Im Rahmen des Forschungsauftrags \textit{Parallel-kontinuierliche Manipulatoren} werden kontinuierliche Roboterstrukturen, welche zu einer parallelen Einheit verbunden werden, untersucht. Das Ziel des Vorhabens ist es, unter anderem die Vorteile beider Domänen synergetisch zu nutzen. 
+%Hierbei gilt es vor allem, die Dynamik bei hoher Steifigkeit parallelkinematischer Maschinen und die flexible, nachgiebige Rückgratstruktur von Kontinuumrobotern in einer Einheit zu verbinden. 
+Die Kinematik eines aus zwei Segmenten bestehenden, seilzugaktuierten Kontinuumroboters soll als kontinuierliche Kette des parallel-kontinuierlichen Manipulators genutzt und in dieser Arbeit modelliert werden. Die direkte Kinematik wird mit bereits existierenden Ansätzen aufgestellt. Mit Mitteln des maschinellen Lernens soll die inverse Kinematik ermittelt werden.\\
+
+Im Kapitel \textit{Stand der Technik} wird dargestellt, dass sich sowohl die Kontinuumsrobotik als auch das bestärkende Lernen in einer aktiven Forschungsphase befinden. In Bezug zur direkten und inversen Kinematik werden die existierenden Methoden und Lösungsansätze aufgezeigt. Es werden außerdem Möglichkeiten aufgezeigt, Orientierungen im Raum darzustellen. \\
+Das bestärkende und überwachte Lernen werden als Kategorien des maschinellen Lernens dargestellt. Es wird die Theorie der künstlichen neuronalen Netze (KNN), die die Grundlage der Lösung von Problemen im maschinellen Lernen bilden, erläutert. Werden künstliche neuronale Netze in Verbindung mit bestärkendem Lernen verwendet spricht man von \textit{Deep Reinforcement Learning}.\\
+
+Zunächst wird die direkte Kinematik, welche den Zusammenhang zwischen den Gelenkwinkeln des Roboters und der daraus resultierenden Position und Orientierung des Endeffektors beschreibt, aufgestellt. Für die Modellierung der direkten Kinematik werden existierende etablierte, geometrische Lösungsansätze verwendet. Es wird die Annahme getroffen, dass jedes Segment des Kontinuumroboters eine konstante Krümmung aufweist. Dadurch kann die direkte Kinematik mithilfe einer Verkettung einer homogenen Transformation pro Segment beschrieben werden. Es wird weiterhin angenommen, dass das zentrale Rückgrat der kontinuierlichen Kette kompressibel ist, was durch eine obere und untere Beschränkung des Gelenkraums bewerkstelligt wird. Die direkte Kinematik wird durch eine digitale Visualisierung validiert. \\
+
+Die inverse Kinematik, welche die Beziehung zwischen einer vorgegeben Position und Orientierung des Endeffektors und die dafür notwendigen Gelenkwinkel aufstellt, ist für Kontinuumsroboter im Allgemeinen schwierig zu bestimmen und wird mithilfe des bestärkenden Lernens untersucht. Grundlage des bestärkenden Lernens ist der Markow-Entscheidungsprozess (MEP). Dieser besteht aus Tupeln von Zuständen, Aktionen, Belohnungen, durch ausgeführte Aktionen resultierende Zustände und Transitionswahrscheinlichkeiten. 
+%Die Markow-Eigenschaft besagt, dass zur Lösung eines MEP kein Vorwissen benötigt wird. Damit ist nur der aktuell bestehende Zustand ausreichend, um ein gewisses Ziel zu erreichen. 
+Die direkte Kinematik dient als Ausgangspunkt für die Formulierung eines MEP, welches zum Ziel hat, die kontinuierliche Kette von einem beliebigen Zustand zu einem vorgegebenen Punkt im Arbeitsraum zu navigieren. Zunächst soll nur eine vorgegebene Position im Arbeitsraum erreicht werden. Das Erreichen einer festgelegten Position wird für die kontinuierliche Kette bestehend aus einem und zwei Segmenten untersucht. Anschließend soll die Orientierung bei der Ermittlung der inversen Kinematik mitberücksichtigt werden. Bei der Untersuchung werden unterschiedliche Ansätze des MEP miteinander verglichen. Zur Lösung des formulierten MEP werden Methoden des \textit{Deep Reinforcement Learning} angewandt. \\
+
+Anstelle des bestärkenden Lernens soll zusätzliche die inverse Kinematik mittels überwachtem Lernen untersucht werden. Bei dem überwachten Lernen steht die Auslegung und das Trainieren eines KNN im Mittelpunkt, das die Gelenkwinkel als Eingang und die Position und Orientierung des Endeffektors als Ausgang besitzt. \\
+
+Die beiden Ansätze des maschinellen Lernens sollen hinsichtlich ihrer unterschiedlichen Herangehensweisen verglichen werden. Hierbei stehen die notwendige Lernzeit der Netze, die Anzahl der zu trainierenden Wichtungsparameter und die Komplexität der verwendeten Algorithmen beim Vergleich im Vordergrund.
+
+
+\end{document}

@@ -1,0 +1,40 @@
+# ignore auxiliary files from jabref
+*.bak
+*.sav
+
+# ignore latex temporary files
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc*
+*.mtc1
+*.mtc2
+*.mtc3
+*.mtc4
+*.out
+*.synctex.gz
+*.dvi
+*.db
+*.nlo
+
+# bilder ignorieren
+*.pdf
+*.jpg
+*.png
+

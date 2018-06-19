@@ -1,0 +1,23 @@
+### install packages via sudo apt-get install PACKAGE_NAME ###
+asymptote
+lmodern
+preview-latex-style
+prosper
+tex-common
+tex-gyre
+texlive-base
+texlive-bibtex-extra
+texlive-extra-utils
+texlive-fonts-recommended
+texlive-font-utils
+texlive-generic-recommended
+texlive-lang-english
+texlive-lang-german
+texlive-latex-base
+texlive-latex-extra
+texlive-latex-recommended
+texlive-pictures
+texlive-pstricks
+texlive-science
+tipa
+
