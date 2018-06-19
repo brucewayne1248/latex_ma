@@ -38,3 +38,6 @@
 *.jpg
 *.png
 
+# exceptions for small pictures/files
+!/bilder/titel/CoverLogos.pdf
+!/bilder/titel/Titelbild_Bender.jpg
