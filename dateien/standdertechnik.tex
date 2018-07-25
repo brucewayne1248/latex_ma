@@ -2,14 +2,43 @@
 
 
 \begin{itemize}
+
 \item Kontinuumsroboter und RL in Renaissance
+\item Ursprung in den 60ern mit Hirose
+\item Aufzeigen der Aktivität im Forschungsgebiet
 \item Kontinuumsroboter Randphänomen in der industriellen Robotik
-\item Vorbilder aus der Tierwelt für Kontinuumsroboter, Oktopus, Schlangen.
-\item Mit Vorbildern der Tierwelt verbundene gewünschte Eigenschaften -> hohe Dexterität und Erreichen von schwerzugänglichen Orten
+\item Definition von Kontinuumsrobotik und Abgrenzung gegenüber seriellen Robotern
+\item Vorbilder aus der Tierwelt für Kontinuumsroboter, Oktopus, Schlangen, Elefanten.
+\item Mit Vorbildern der Tierwelt verbundene gewünschte Eigenschaften -> hohe Dexterität und Erreichen von schwerzugänglichen Orten, Nachgiebigkeit. Eigenschaften wie Umschließen damit Greifen
+\item Erste Kontinuumsroboter Hirose Snacklike units
+\item Aufzeigen einiger Beispiele von Kontinuumsrobotern in Anlehnung an biologische Vorbilder
 \item Kurz Unterschiede der Freiheitsgrade zwischen seriellen und kontinuierlichen Strukturen
-\item Darstellung von Rotationen, homogene Trafo-Matrix, RPY, Achse-Winkel, Quaternionen
+\item Wichtigste Kontinuumsroboter: Seilzugaktuierte oder Multibackbone Kontinuumsroboter, tubuläre Kontinuumsroboter, Steuerbare Nadeln
+
+\item Derzeitige Forschungsgebiete/Anwendungsgebiete: Metabot (https://www.lkr.uni-hannover.de/projects.html), Parallelkontinuierliche Manipulatoren (PCR)
+\item Medusa (https://www.lkr.uni-hannover.de/medusa.html)
+\item Anwendung in der Medizintechnik
+
+\item Modellierung der Kinematik Annahme der konstanten Krümmung des Kontinuumsroboter pro Segment
+
+\item Kinematik: Allgemeiner geometrischer Zusammenhang zwischen Gelenkwinkeln des Roboters sowie der Position und Orientierung im Raum. Beachtung von Position und Orientierung als Lage bezeichnet. Position über die drei Raumachsen $x, y, z$. Orientierung nicht mehr so eindeutig.
+\item Direkte Kinematik bereits etablierte Modelle für konstante Krümmungen
+\item ??Darstellung von Orientierungen, Euler-Winkel, Achse-Winkel, Quaternionent. Abgrenzung Vorteile Quaternionen sollten immer verwendet werden??
+\item Inverse Kinematik allgemein schwieriger zu lösen. 
+\item Darstellung verschiedener Ansätze zur inversen Kinematik, Abgrenzung zu meinem Ansatz
+\item Geometrische Inverse Kinematik: Aber benötigt Endpunkte aller Segmente
+\item Inverse Kinematik mittels Supervised Learning
+\item Mein Ansatz mittels Reinforcement Learning
+\item Darauf aufmerksam machen, dass man beim Reinforcement learning ansatz einen bisher nicht erforschten Weg gefunden hat. --> Recherche nach Papern. 
 \\
-\item RL als Unterkategorie des maschinellen Lernens (Supervised, Unsupervised, RL)
-\item RL Errungenschaften - Heli, GO, Chess, Dota2 
+\item 
+\item RL als Gruppe von Methoden des maschinellen Lernens (Supervised, Unsupervised, RL) darstellen. 
 \item RL Methoden, vor allem Deep RL und das neuronale Netz
+\item Die Bedeutung von künstlichen neuronalen Netzen im Reinforcement Learning beschreiben
+\item Verwendung von künstlichen neuronalen Netzen für Funktionsapproximierung - Skalierung des RL auf hochdimensionale Anwendungsgebiete
+\item RL Errungenschaften - Heli, GO, Dota2/OpenAiFive
+\item RL in der Realität: Problematik curse of dimensionality, und Datengenerierung - Zurücksetzen des Ausgangszustands. Beispiel google mit roboterfarm die greifen (https://ai.googleblog.com/2018/06/scalable-deep-reinforcement-learning.html) 
+
 \end{itemize}
+
+In diesem Kapitel werden die Grundlagen der Kontinuumsrobotik und des Bestärkenden Lernen dargestellt. Nach einem historischen Rückblick beider Forschungsgebiete folgt die Darlegung aktueller wissenschaftlicher Errungenschaften beider Domänen. Verbreitete Modellierungsmöglichkeiten der direkten Kinematik von Kontinuumsrobotern werden aufgezeigt.

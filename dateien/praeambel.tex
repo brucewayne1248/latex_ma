@@ -172,7 +172,10 @@
 \tikzstyle{simplearrow} = [draw, -latex, line width=2pt, color=imesblue]
 
 
-\usepackage{pstricks}
+\usepackage{lipsum} 			% zum Einfügen von Paragraphen von text
+\usepackage{wrapfig}			% Bild und Textfluss
+
+
 
 %\DeclareUnicodeCharacter{00A0}{~}
 
@@ -196,7 +199,9 @@
     \fi
 \fi
 % von wo sollen die Grafiken kommen?
-\graphicspath{{./bilder/}}
+
+\graphicspath{{./bilder/}{./bilder/kinematik/}}
+
 %\graphicspath{{./bilder/titel}}
 %\graphicspath{{./bilder/einleitung}}
 %\graphicspath{{./bilder/standdertechnik}}

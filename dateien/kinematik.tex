@@ -8,7 +8,7 @@ f(\bm{q}) = \bm{x}_\mathrm{E}
 \end{equation}
 %
 den geometrischen Zusammenhang zwischen den $m$ Gelenkwinkeln $\bm{q} = \left[q_1, q_2, ..., q_m \right]^\transpose $ des Roboters und der daraus resultierenden Position und Lage Endeffektors~$\bm{x}_\mathrm{E}$.
-%$\bm{x}_\mathrm{E} = \left[x_\mathrm{E}, y_\mathrm{E}, z_\mathrm{E}, \phi_\mathrm{E}, \psi_\mathrm{E}, \theta_\mathrm{E} \right]^\transpose $. Hierbei entspricht $m$ der Anzahl der Gelenkwinkel und $\bm{x}_\mathrm{E}$ den kartesischen Raumkoordinaten sowie der Orientierung des Endeffektors. Die Orientierung ist hier zunächst durch die Verwendung von drei Winkeln $\phi_\mathrm{E}, \psi_\mathrm{E}$ und $\theta_\mathrm{E}$ dargestellt. 
+$\bm{x}_\mathrm{E} = \left[x_\mathrm{E}, y_\mathrm{E}, z_\mathrm{E}, \phi_\mathrm{E}, \psi_\mathrm{E}, \theta_\mathrm{E} \right]^\transpose $. Hierbei entspricht $m$ der Anzahl der Gelenkwinkel und $\bm{x}_\mathrm{E}$ den kartesischen Raumkoordinaten sowie der Orientierung des Endeffektors. Die Orientierung ist hier zunächst durch die Verwendung von drei Winkeln $\phi_\mathrm{E}, \psi_\mathrm{E}$ und $\theta_\mathrm{E}$ dargestellt. 
 Die direkte Kinematik lässt sich auf die Gelenkwinkelgeschwindikeiten $f(\bm{\dot{q}}) = \bm{\dot{x}}_\mathrm{E} $ und -beschleunigungen $f(\bm{\ddot{q}}) = \bm{\ddot{x}}_\mathrm{E}$ erweitern. Im späteren Verlauf dieser Arbeit wird die inverse Kinematik
 %
 \begin{align}
@@ -21,8 +21,8 @@ f^{-1}(\bm{x}_\mathrm{E}) = \bm{q},
 \begin{tikzpicture}[auto, node distance=2cm, line width=2pt]
 % Zeichne Blöcke mit innerem Text
 \node[name=center] {};
-\node[simplebox, minimum size=1.5cm, left of=center, name=q, color=imesblue, label={[align=center]:Gelenk-\\ winkel}] {\textblack{$\bm{q}$}};
-\node[simplebox, minimum size=1.5cm, right of=center, name=x, label={[align=center]:Position,\\ Lage}] {\textblack{$\bm{x}_\mathrm{E}$}};
+\node[simplebox, minimum size=1.5cm, left of=center, name=q, color=imesblue, label={[align=center]:Gelenk-\\ winkel}, label={[align=center]below:Gelenk-\\ raum}] {\textblack{$\bm{q}$}};
+\node[simplebox, minimum size=1.5cm, right of=center, name=x, label={[align=center]:Position,\\ Lage}, label={[align=center]below:Arbeits-\\ raum}] {\textblack{$\bm{x}_\mathrm{E}$}};
 % berechne Punkte für verschobene Linien zwischen Boxen
 \path (q.east) -- (q.north east) coordinate[pos=0.5] (q1);
 \path (q.east) -- (q.south east) coordinate[pos=0.5] (q2);
@@ -39,7 +39,7 @@ f^{-1}(\bm{x}_\mathrm{E}) = \bm{q},
 
 welche eine gegebene Lage und Orientierung im Arbeitsraum Gelenkwinkel zuordnet, ermittelt. Die Beziehung zwischen der direkten und inversen Kinematik ist in \abb{fig:kinematik} grafisch dargestellt. 
 
-Im Gegensatz zu seriellen Robotern mit starren Strukturen besitzen Kontinuumsroboter ein nachgiebiges Glied, welches sich kontinuierlich unter dem Einfluss von Kräften krümmt. Für die Modellierung der direkten Kinematik wird die Annahme getroffen, dass der Kontinuumroboter in jedem Abschnitt eine stückweise konstante Krümmung annimmt. Damit lässt sich die Form jedes Abschnitts mithilfe eines Kreisbogens beschreiben. Dies ermöglicht weiterhin die Kinematik von Kontinuumrobotern in einen roboterspezifischen und einen roboterunabhängigen Zusammenhang aufzuteilen \cite{WIJ10}. Unter Verwendung der Gelenkwinkel ermittelt die roboterspezifische Funktion
+Im Gegensatz zu seriellen Robotern mit starren Strukturen besitzen Kontinuumsroboter ein nachgiebiges Glied, welches sich kontinuierlich unter dem Einfluss von Kräften krümmt. Für die Modellierung der direkten Kinematik wird im Rahmen dieser Arbeit die Annahme getroffen, dass der Kontinuumroboter in jedem Abschnitt eine stückweise konstante Krümmung annimmt. Damit lässt sich die Form jedes Abschnitts mithilfe eines Kreisbogens beschreiben. Dies ermöglicht weiterhin die Kinematik von Kontinuumrobotern in einen roboterspezifischen und einen roboterunabhängigen Zusammenhang aufzuteilen \cite{WIJ10}. Unter Verwendung der Gelenkwinkel ermittelt die roboterspezifische Funktion
 %
 \begin{align}
 f_{\mathrm{s}}(\bm{q}) = [\kappa, \phi, l]^\transpose
@@ -100,7 +100,11 @@ INSERT GRAPHIC HERE VON WEGEN MIT EINEM KREISBOGEN UND DEN PARAMETERN UND DEN KO
 \section{Die roboterspezifische Kinematik}
 \label{sec:spezifischeKinematik}
 
-Die roboterspezifische Kinematik stellt einen Zusammenhang zwischen den Bogenparametern im Konfigurationsraum und den entsprechenden Gelenkwinkeln im Gelenkraum her. Die auf die Roboterstruktur wirkenden Kräfte und Momente der Aktuatoren sind für die tatsächliche Formgebung relevant. Über eine Untersuchung der auf den Roboter wirkenden Kräfte und Momente kann im Allgemeinen die roboterspezifische Funktion~\eqref{eq:fspezifisch} ermittelt werden. Für den hier betrachteten seilzugaktuierten Kontinuumsroboter werden folgende Vereinfachungen für die Modellierung der roboterspezifischen Kinematik getroffen:
+Die roboterspezifische Kinematik stellt den direkten Zusammenhang zwischen den entsprechenden Gelenkwinkeln im Gelenkraum und den Bogenparametern im Konfigurationsraum her. Die auf die Roboterstruktur wirkenden Kräfte und Momente der Aktuatoren sind für die tatsächliche Formgebung relevant. Über eine Untersuchung der auf den Roboter wirkenden Kräfte und Momente kann im Allgemeinen die roboterspezifische Funktion~\eqref{eq:fspezifisch} ermittelt werden. Für den hier betrachteten seilzugaktuierten Kontinuumsroboter werden folgende Vereinfachungen für die Modellierung der roboterspezifischen Kinematik getroffen:
+
+\begin{itemize}
+\item Gravagne et al. 2003 -> constant curvature = konstantes Moment entlang Strahl
+\end{itemize}
 
 \begin{itemize}
 \item Vernachlässigung von Torsion,
@@ -143,13 +147,20 @@ Für die Aktuierung des $i$-ten Segments werden im Allgemeinen drei Seillängen 
 
 \section{Erweiterung der Kinematik auf zwei Abschnitte}
 \label{sec:erweiterungKinematik}
+\lipsum[1]
+\begin{wrapfigure}{I}{0.5\textwidth}
+\centering
+{
+   \fontsize{14pt}{11pt}\selectfont% or whatever fontsize you like
+%   \def\svgwidth{0.5\linewidth}
+   \input{bilder/kinematik/configuration_space02.pdf_tex}
+}
+%\resizebox{0.75\textwidth}{!}{\input{bilder/kinematik/configuration_space01.pdf_tex}}
+%\input{bilder/kinematik/configuration_space01.pdf_tex}
+\caption[Bogenparameter eines Segments des Kontinuumsroboters]{Bogenparameter eines Segments des Kontinuumsroboters mit Darstellung der Rotationsebene}
+\end{wrapfigure}
 
-\begin{figure}
-\def\svgwidth{\linewidth}
-\input{bilder/kinematik/drawing.pdf_tex}
-\caption{testbild}
-\end{figure}
-
+\lipsum[2-3]
 
 
 
