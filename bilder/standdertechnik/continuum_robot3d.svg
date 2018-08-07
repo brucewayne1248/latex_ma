@@ -1,0 +1,2291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with matplotlib (http://matplotlib.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="174.35593mm"
+   version="1.1"
+   viewBox="0 0 388.52542 494.23727"
+   width="137.06314mm"
+   id="svg597"
+   sodipodi:docname="continuum_robot3d.svg"
+   inkscape:version="0.92.3 (unknown)">
+  <metadata
+     id="metadata601">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2499"
+     inkscape:window-height="1410"
+     id="namedview599"
+     showgrid="false"
+     units="mm"
+     inkscape:zoom="2"
+     inkscape:cx="105.53669"
+     inkscape:cy="394.6009"
+     inkscape:window-x="61"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg597" />
+  <defs
+     id="defs4"
+     style="stroke-linecap:butt;stroke-linejoin:round">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker11245"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path11243"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9095"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:collect="always">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path9093"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker8039"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path8037"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path5409"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <style
+       type="text/css"
+       id="style2">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5390"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.75118101;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="rect5392"
+         width="388.52542"
+         height="494.23727"
+         x="218.28813"
+         y="39.813557" />
+    </clipPath>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-2"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5409-4"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-4"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5409-8"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-4-2"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5409-8-8"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9095-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path9093-2"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <g
+     id="figure_1"
+     clip-path="url(#clipPath5390)"
+     transform="translate(-203.87213,-48.07687)"
+     style="stroke-linecap:butt;stroke-linejoin:round">
+    <g
+       id="axes_1"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <g
+         id="Poly3DCollection_1"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 443.90845,394.56507 -5.39911,-0.10983 v -6.82916 l 5.41034,0.10984 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path12"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_2"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 438.50934,394.45524 -5.39911,0.10983 -0.0112,-6.82915 5.41034,-0.10984 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path15"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="patch_3"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 439.95847,432.15328 q 32.41964,30.84792 62.4094,59.38377"
+           style="fill:none;stroke:#ff0000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path18"
+           inkscape:connector-curvature="0" />
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 500.84873,487.33084 1.51914,4.20621 -4.27645,-1.30842 z"
+           style="fill:#ff0000;stroke:#ff0000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path20"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="patch_4"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 440.41922,430.16865 q 55.08957,-17.47293 106.98199,-33.93182"
+           style="fill:none;stroke:#008000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path23"
+           inkscape:connector-curvature="0" />
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 542.98374,395.53975 4.41747,0.69708 -3.20815,3.11573 z"
+           style="fill:#008000;stroke:#008000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path25"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="patch_5"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 438.50934,428.77039 q 0,-32.8554 0,-62.35671"
+           style="fill:none;stroke:#0000ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path28"
+           inkscape:connector-curvature="0" />
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 436.50934,370.41368 2,-4 2,4 z"
+           style="fill:#0000ff;stroke:#0000ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path30"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="patch_6"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 348.50791,139.29186 q 35.15055,31.4165 67.80028,60.59784"
+           style="fill:none;stroke:#ff0000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path33"
+           inkscape:connector-curvature="0" />
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 414.65858,195.73293 1.64961,4.15677 -4.31518,-1.17438 z"
+           style="fill:#ff0000;stroke:#ff0000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path35"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="patch_7"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="M 348.79872,137.04404 Q 407.23513,107.06227 462.6873,78.611609"
+           style="fill:none;stroke:#008000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path38"
+           inkscape:connector-curvature="0" />
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 458.21541,78.658112 4.47189,-0.0465 -2.64593,3.605417 z"
+           style="fill:#008000;stroke:#008000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path40"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="patch_8"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="M 345.90153,136.29952 Q 324.35792,104.23324 304.68479,74.951063"
+           style="fill:none;stroke:#0000ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path43"
+           inkscape:connector-curvature="0" />
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 305.25537,79.386652 -0.57058,-4.435589 3.89082,2.204896 z"
+           style="fill:#0000ff;stroke:#0000ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"
+           id="path45"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_3"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 433.11023,394.56507 -5.36995,0.32889 -0.0224,-6.82912 5.38111,-0.32892 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path48"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_1"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 438.50934,430.77441 -0.009,-2.99071 -0.0256,-2.99081 -0.0427,-2.99088 -0.0599,-2.99093 -0.077,-2.99096 -0.0943,-2.99097 -0.11161,-2.99096 -0.12895,-2.99093 -0.14635,-2.99088 -0.1638,-2.9908 -0.18129,-2.99071 -0.19883,-2.9906 -0.21642,-2.99046 -0.23406,-2.99031 -0.25175,-2.99012 -0.26948,-2.98993 -0.28727,-2.9897 -0.3051,-2.98946 -0.32299,-2.98918 -0.34092,-2.9889 -0.35891,-2.98859 -0.37694,-2.98825 -0.39502,-2.9879 -0.41315,-2.98751 -0.43134,-2.98711 -0.44957,-2.98668 -0.46786,-2.98623 -0.48619,-2.98576 -0.50457,-2.98526 -0.52301,-2.98474 -0.54149,-2.98419 -0.56004,-2.98362 -0.57862,-2.98302 -0.59726,-2.98241 -0.61595,-2.98176 -0.6347,-2.98109 -0.65348,-2.9804 -0.67234,-2.97968 -0.69123,-2.97893 -0.71018,-2.97816 -0.72918,-2.97737 -0.74824,-2.97654 -0.76734,-2.97569 -0.7865,-2.97482 -0.80571,-2.97392 -0.82497,-2.97299 -0.84429,-2.97204 -0.86366,-2.97106 -0.88308,-2.97004 -0.90255,-2.96901 -0.92209,-2.96795 -0.94166,-2.96685 -0.96129,-2.96574 -0.98099,-2.96459 -1.00072,-2.96341 -1.02052,-2.96221 -1.04037,-2.96098 -1.06027,-2.95971 -1.08022,-2.95843 -1.10024,-2.95711 -1.12029,-2.95576 -1.14042,-2.95437 -1.16059,-2.95298 -1.18081,-2.95153 -1.2011,-2.95007 -1.22143,-2.94857 -1.24182,-2.94704 -1.26227,-2.94548 -1.28276,-2.94389 -1.30332,-2.94227 -1.32392,-2.94062 -1.34459,-2.93893 -1.36531,-2.93722 -1.38609,-2.93547 -1.40691,-2.9337 -1.42779,-2.93188 -1.44874,-2.93003 -1.46973,-2.92816 -1.49078,-2.92625 -1.51189,-2.92431 -1.53304,-2.92234 -1.55427,-2.92032 -1.57553,-2.91828 -1.59687,-2.9162 -1.61824,-2.9141 -1.63969,-2.91194 -1.66119,-2.90977 -1.68273,-2.90756 -1.70434,-2.9053 -1.72601,-2.90302 -1.74772,-2.90071 -1.7695,-2.89834 -1.79133,-2.89596 -1.81322,-2.89353 -1.83516,-2.89106 -1.85716,-2.88857 -1.87922,-2.88603 -1.90133,-2.88346 -1.9235,-2.88084"
+           style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:square;stroke-linejoin:round"
+           id="path51"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_2"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="M 501.5668,407.37804 415.46988,107.24145"
+           style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:round"
+           id="path54"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_3"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="M 375.45189,407.37804 282.43307,127.82497"
+           style="fill:none;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:3.7, 1.6;stroke-dashoffset:0"
+           id="path57"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="line2d_4"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="M 438.50934,468.02114 350.22548,189.33797"
+           style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:round"
+           id="path60"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_4"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 449.2784,394.89396 -5.36995,-0.32889 0.0112,-6.82915 5.38111,0.32892 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path63"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_5"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 454.59015,395.44022 -5.31175,-0.54626 0.0224,-6.82912 5.32281,0.54631 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path66"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_6"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 427.74028,394.89396 -5.31175,0.54626 -0.0335,-6.82907 5.32281,-0.54631 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path69"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_7"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 459.81498,396.20098 -5.22483,-0.76076 0.0335,-6.82907 5.23571,0.76083 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path72"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_8"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 422.42853,395.44022 -5.22483,0.76076 -0.0443,-6.829 5.23571,-0.76083 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path75"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_9"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 464.92455,397.17228 -5.10957,-0.9713 0.0443,-6.829 5.12022,0.97139 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path78"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_10"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 417.2037,396.20098 -5.10957,0.9713 -0.055,-6.82891 5.12021,-0.97139 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path81"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_11"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 412.09413,397.17228 -4.96656,1.17676 -0.0653,-6.8288 4.97692,-1.17687 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path84"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_12"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 469.89111,398.34904 -4.96656,-1.17676 0.055,-6.82891 4.97691,1.17687 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path87"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_13"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 474.68758,399.72508 -4.79647,-1.37604 0.0653,-6.8288 4.80649,1.37617 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path90"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_14"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 407.12757,398.34904 -4.79647,1.37604 -0.0754,-6.82867 4.80649,-1.37617 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path93"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_15"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 479.28774,401.29318 -4.60016,-1.5681 0.0753,-6.82867 4.60979,1.56826 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path96"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_16"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 402.3311,399.72508 -4.60016,1.5681 -0.085,-6.82851 4.60978,-1.56826 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path99"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_17"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 483.66633,403.04508 -4.37859,-1.7519 0.085,-6.82851 4.38775,1.75207 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path102"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_18"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 397.73094,401.29318 -4.37859,1.7519 -0.0941,-6.82834 4.38776,-1.75207 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path105"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_19"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 487.79917,404.97152 -4.13284,-1.92644 0.0941,-6.82834 4.14152,1.92665 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path108"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_20"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 393.35235,403.04508 -4.13284,1.92644 -0.10282,-6.82813 4.14152,-1.92665 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path111"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_21"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 491.66332,407.0623 -3.86415,-2.09078 0.10282,-6.82813 3.87228,2.09099 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path114"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_22"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 389.21951,404.97152 -3.86415,2.09078 -0.11095,-6.82792 3.87228,-2.09099 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path117"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_23"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 495.23719,409.30629 -3.57387,-2.24399 0.11095,-6.82792 3.5814,2.24423 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path120"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_24"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 385.35536,407.0623 -3.57387,2.24399 -0.11848,-6.82768 3.5814,-2.24423 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path123"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_25"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 498.50066,411.69151 -3.26347,-2.38522 0.11848,-6.82768 3.27037,2.38549 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path126"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_26"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 381.78149,409.30629 -3.26347,2.38522 -0.12538,-6.82741 3.27037,-2.38549 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path129"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_27"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 501.43518,414.20517 -2.93452,-2.51366 0.12538,-6.82741 2.94076,2.51394 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path132"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_28"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 378.51802,411.69151 -2.93452,2.51366 -0.13161,-6.82713 2.94075,-2.51394 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path135"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_29"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 504.02392,416.83374 -2.58874,-2.62857 0.13162,-6.82713 2.59425,2.62887 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path138"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_30"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 375.5835,414.20517 -2.58874,2.62857 -0.13713,-6.82683 2.59426,-2.62887 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path141"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_31"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 506.25182,419.56299 -2.2279,-2.72925 0.13713,-6.82683 2.23267,2.72958 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path144"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_32"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 372.99476,416.83374 -2.22789,2.72925 -0.14191,-6.8265 2.23267,-2.72958 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path147"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_33"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 508.10572,422.3781 -1.8539,-2.81511 0.1419,-6.8265 1.85791,2.81546 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path150"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_34"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 370.76687,419.56299 -1.85391,2.81511 -0.1459,-6.82615 1.8579,-2.81546 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path153"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_35"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 368.91296,422.3781 -1.46874,2.88559 -0.14911,-6.82579 1.47195,-2.88595 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path156"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_36"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 509.57446,425.26369 -1.46874,-2.88559 0.14591,-6.82615 1.47194,2.88595 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path159"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_37"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 510.64892,428.20392 -1.07446,-2.94023 0.14911,-6.82579 1.07685,2.94061 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path162"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_38"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 367.44422,425.26369 -1.07446,2.94023 -0.1515,-6.82541 1.07685,-2.94061 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path165"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_39"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 511.32213,431.18257 -0.67321,-2.97865 0.1515,-6.82541 0.67475,2.97905 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path168"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_40"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 366.36976,428.20392 -0.67321,2.97865 -0.15304,-6.82501 0.67475,-2.97905 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path171"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_41"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 511.5893,434.18313 -0.26717,-3.00056 0.15304,-6.82501 0.26787,3.00097 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path174"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_42"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 365.69655,431.18257 -0.26717,3.00056 -0.15374,-6.8246 0.26787,-3.00097 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path177"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_43"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 511.44789,437.18886 0.14141,-3.00573 0.15374,-6.8246 -0.14158,3.00616 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path180"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_44"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 365.42938,434.18313 0.14141,3.00573 -0.15357,-6.82417 -0.14158,-3.00616 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path183"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_45"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 510.89763,440.18295 0.55026,-2.99409 0.15357,-6.82417 -0.55129,2.99451 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path186"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_46"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 365.57079,437.18886 0.55027,2.99409 -0.15254,-6.82375 -0.5513,-2.99451 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path189"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_47"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 366.12106,440.18295 0.95707,2.96556 -0.15065,-6.82331 -0.95896,-2.966 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path192"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_48"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 509.94055,443.14851 0.95708,-2.96556 0.15254,-6.82375 -0.95896,2.966 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path195"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_49"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 508.58103,446.06877 1.35952,-2.92026 0.15066,-6.82331 -1.36227,2.92071 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path198"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_50"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 367.07813,443.14851 1.35952,2.92026 -0.14791,-6.82286 -1.36226,-2.92071 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path201"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_51"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 368.43765,446.06877 1.75531,2.85835 -0.14433,-6.82242 -1.75889,-2.85879 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path204"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_52"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 506.82572,448.92712 1.75531,-2.85835 0.14791,-6.82286 -1.75889,2.85879 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path207"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_53"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 504.68361,451.70721 2.14211,-2.78009 0.14433,-6.82242 -2.14653,2.78053 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path210"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_54"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 370.19296,448.92712 2.14211,2.78009 -0.13991,-6.82198 -2.14653,-2.78053 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path213"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_55"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 502.16592,454.39308 2.51769,-2.68587 0.13991,-6.82198 -2.52291,2.6863 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path216"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_56"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 372.33507,451.70721 2.51769,2.68587 -0.13469,-6.82155 -2.52291,-2.6863 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path219"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_57"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 499.28613,456.96922 2.87979,-2.57614 0.13469,-6.82155 -2.88579,2.57657 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path222"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_58"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 374.85276,454.39308 2.8798,2.57614 -0.1287,-6.82112 -2.88579,-2.57657 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path225"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_59"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 496.05984,459.42071 3.22629,-2.45149 0.12869,-6.82112 -3.23304,2.4519 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path228"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_60"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 377.73256,456.96922 3.22628,2.45149 -0.12194,-6.82071 -3.23304,-2.4519 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path231"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_61"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 492.50477,461.73329 3.55507,-2.31258 0.12194,-6.82071 -3.56252,2.31297 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path234"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_62"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 380.95884,459.42071 3.55507,2.31258 -0.11449,-6.82032 L 380.8369,452.6 Z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path237"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_63"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 488.64063,463.89342 3.86414,-2.16013 0.11449,-6.82032 -3.87227,2.16051 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path240"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_64"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 384.51391,461.73329 3.86414,2.16013 -0.10636,-6.81994 -3.87227,-2.16051 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path243"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_65"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 484.489,465.88844 4.15163,-1.99502 0.10636,-6.81994 -4.16038,1.99537 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path246"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_66"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 388.37805,463.89342 4.15163,1.99502 -0.0976,-6.81959 -4.16038,-1.99537 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path249"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_67"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <defs
+           id="defs253">
+          <path
+             d="m 475.41837,-179.38279 4.65488,-1.63059 4.41575,-1.81818 4.15163,-1.99502 3.86414,-2.16013 3.55507,-2.31257 3.22629,-2.4515 2.87979,-2.57614 2.51769,-2.68587 2.14211,-2.78009 1.75531,-2.85835 1.35952,-2.92026 0.95708,-2.96556 0.55026,-2.99409 0.14141,-3.00573 -0.26717,-3.00056 -0.67321,-2.97865 -1.07446,-2.94023 -1.46874,-2.88559 -1.8539,-2.81511 -2.2279,-2.72925 -2.58874,-2.62857 -2.93452,-2.51366 -3.26347,-2.38522 -3.57387,-2.24399 -3.86415,-2.09078 -4.13284,-1.92644 -4.37859,-1.7519 -4.60016,-1.5681 -4.79647,-1.37604 -4.96656,-1.17676 -5.10957,-0.9713 -5.22483,-0.76076 -5.31175,-0.54626 -5.36995,-0.32889 -5.39911,-0.10983 -5.39911,0.10983 -5.36995,0.32889 -5.31175,0.54626 -5.22483,0.76076 -5.10957,0.9713 -4.96656,1.17676 -4.79647,1.37604 -4.60016,1.5681 -4.37859,1.7519 -4.13284,1.92644 -3.86415,2.09078 -3.57387,2.24399 -3.26347,2.38522 -2.93452,2.51366 -2.58874,2.62857 -2.22789,2.72925 -1.85391,2.81511 -1.46874,2.88559 -1.07446,2.94023 -0.67321,2.97865 -0.26717,3.00056 0.14141,3.00573 0.55027,2.99409 0.95707,2.96556 1.35952,2.92026 1.75531,2.85835 2.14211,2.78009 2.51769,2.68587 2.8798,2.57614 3.22628,2.4515 3.55507,2.31257 3.86414,2.16013 4.15163,1.99502 4.41575,1.81818 4.65488,1.63059 4.86752,1.43335 5.05234,1.2276 5.20817,1.01455 5.33405,0.79545 5.42916,0.57159 5.49291,0.34434 5.52488,0.115 5.52488,-0.115 5.49291,-0.34434 5.42916,-0.57159 5.33405,-0.79545 5.20818,-1.01455 5.05233,-1.2276 z"
+             id="m89fc2ef30f"
+             style="stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             inkscape:connector-curvature="0" />
+        </defs>
+        <g
+           clip-path="url(#p3a483a4801)"
+           id="g257"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             style="fill:#808080;fill-opacity:0.5;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             x="0"
+             xlink:href="#m89fc2ef30f"
+             y="648.71997"
+             id="use255"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="Poly3DCollection_68"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 480.07325,467.70662 4.41575,-1.81818 0.0976,-6.81959 -4.42508,1.8185 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path260"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_69"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 392.52968,465.88844 4.41575,1.81818 -0.0883,-6.81927 -4.42508,-1.8185 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path263"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_70"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 396.94543,467.70662 4.65488,1.63059 -0.0784,-6.81897 -4.66473,-1.63089 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path266"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_71"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 475.41837,469.33721 4.65488,-1.63059 0.0883,-6.81927 -4.66473,1.63089 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path269"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_72"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 401.60031,469.33721 4.86752,1.43335 -0.0681,-6.81871 -4.87784,-1.43361 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path272"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_73"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 470.55085,470.77056 4.86752,-1.43335 0.0784,-6.81897 -4.87783,1.43361 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path275"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_74"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 465.49852,471.99816 5.05233,-1.2276 0.0681,-6.81871 -5.06306,1.22783 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path278"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_75"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 406.46783,470.77056 5.05234,1.2276 -0.0574,-6.81848 -5.06305,-1.22783 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path281"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_76"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 411.52017,471.99816 5.20817,1.01455 -0.0463,-6.8183 -5.21924,-1.01473 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path284"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_77"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 460.29034,473.01271 5.20818,-1.01455 0.0574,-6.81848 -5.21924,1.01473 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path287"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_78"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 416.72834,473.01271 5.33405,0.79545 -0.035,-6.81815 -5.34539,-0.7956 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path290"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_79"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 454.95629,473.80816 5.33405,-0.79545 0.0463,-6.8183 -5.34539,0.7956 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path293"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_80"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 422.06239,473.80816 5.42916,0.57159 -0.0235,-6.81804 -5.4407,-0.5717 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path296"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_81"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 449.52713,474.37975 5.42916,-0.57159 0.035,-6.81815 -5.4407,0.5717 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path299"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_82"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 427.49155,474.37975 5.49291,0.34433 -0.0118,-6.81797 -5.5046,-0.3444 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path302"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_83"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 444.03422,474.72408 5.49291,-0.34433 0.0235,-6.81804 -5.5046,0.3444 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path305"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_84"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 432.98446,474.72408 5.52488,0.11501 v -6.81795 l -5.53664,-0.11503 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path308"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_85"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 438.50934,474.83909 5.52488,-0.11501 0.0118,-6.81797 -5.53664,0.11503 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path311"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_86"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <defs
+           id="defs315">
+          <path
+             d="m 475.4968,-186.20176 4.66473,-1.63089 4.42508,-1.8185 4.16038,-1.99537 3.87227,-2.16051 3.56252,-2.31297 3.23304,-2.4519 2.88579,-2.57657 2.52291,-2.6863 2.14653,-2.78053 1.75889,-2.85879 1.36227,-2.9207 0.95896,-2.96601 0.55129,-2.99451 0.14158,-3.00616 -0.26787,-3.00097 -0.67475,-2.97905 -1.07685,-2.94061 -1.47194,-2.88595 -1.85791,-2.81546 -2.23267,-2.72958 -2.59425,-2.62887 -2.94076,-2.51394 -3.27037,-2.38549 -3.5814,-2.24423 -3.87228,-2.09099 -4.14152,-1.92665 -4.38775,-1.75207 -4.60979,-1.56825 -4.80649,-1.37618 -4.97691,-1.17687 -5.12022,-0.97139 -5.23571,-0.76083 -5.32281,-0.54631 -5.38111,-0.32892 -5.41034,-0.10983 -5.41034,0.10983 -5.38111,0.32892 -5.32281,0.54631 -5.23571,0.76083 -5.12021,0.97139 -4.97692,1.17687 -4.80649,1.37618 -4.60978,1.56825 -4.38776,1.75207 -4.14152,1.92665 -3.87228,2.09099 -3.5814,2.24423 -3.27037,2.38549 -2.94075,2.51394 -2.59426,2.62887 -2.23267,2.72958 -1.8579,2.81546 -1.47195,2.88595 -1.07685,2.94061 -0.67475,2.97905 -0.26787,3.00097 0.14158,3.00616 0.5513,2.99451 0.95896,2.96601 1.36226,2.9207 1.75889,2.85879 2.14653,2.78053 2.52291,2.6863 2.88579,2.57657 3.23304,2.4519 3.56252,2.31297 3.87227,2.16051 4.16038,1.99537 4.42508,1.8185 4.66473,1.63089 4.87784,1.43361 5.06305,1.22783 5.21924,1.01473 5.34539,0.7956 5.4407,0.5717 5.5046,0.3444 5.53664,0.11503 5.53664,-0.11503 5.5046,-0.3444 5.4407,-0.5717 5.34539,-0.7956 5.21924,-1.01473 5.06306,-1.22783 z"
+             id="m8f2c803b12"
+             style="stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             inkscape:connector-curvature="0" />
+        </defs>
+        <g
+           clip-path="url(#p3a483a4801)"
+           id="g319"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             style="fill:#808080;fill-opacity:0.5;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             x="0"
+             xlink:href="#m8f2c803b12"
+             y="648.71997"
+             id="use317"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="Poly3DCollection_87"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 325.77422,99.720813 -5.36501,1.990557 -4.43918,-6.598865 5.37863,-1.995758 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path322"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_88"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 320.40921,101.71137 -5.2058,2.20922 -4.45268,-6.593511 5.2193,-2.214574 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path325"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_89"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 331.26943,97.959701 -5.49521,1.761112 -4.42556,-6.604066 5.5089,-1.766138 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path328"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_90"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 315.20341,103.92059 -5.01844,2.41598 -4.46597,-6.588044 5.03173,-2.421447 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path331"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_91"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 336.86515,96.437611 -5.59572,1.52209 -4.41187,-6.609092 5.60939,-1.526915 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path334"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_92"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 310.18497,106.33657 -4.80385,2.60973 -4.479,-6.58249 4.81688,-2.615284 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path337"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_93"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 342.53115,95.162879 -5.666,1.274732 -4.3982,-6.613917 5.67959,-1.279329 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path340"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_94"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 305.38112,108.9463 -4.56318,2.78945 -4.49169,-6.57686 4.57587,-2.79508 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path343"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_95"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 348.2368,94.142557 -5.70565,1.020322 -4.38461,-6.618514 5.71909,-1.024667 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path346"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_96"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 300.81794,111.73575 -4.29762,2.95419 -4.50397,-6.5712 4.3099,-2.95985 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path349"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_97"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 353.95121,93.382371 -5.71441,0.760186 -4.37117,-6.622859 5.72762,-0.764253 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path352"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_98"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 296.52032,114.68994 -4.00854,3.10306 -4.51578,-6.56553 4.02035,-3.10873 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path355"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_99"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 359.64341,92.886695 -5.6922,0.495676 -4.35796,-6.626926 5.70512,-0.499446 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path358"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_100"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 292.51178,117.793 -3.69742,3.23524 -4.52704,-6.55988 3.70868,-3.24089 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path361"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_101"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 365.28246,92.658517 -5.63905,0.228178 -4.34504,-6.630696 5.6516,-0.231627 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path364"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_102"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 288.81436,121.02824 -3.36582,3.35001 -4.53772,-6.55429 3.3765,-3.3556 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path367"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_103"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 370.83763,92.699424 -5.55517,-0.04091 -4.33249,-6.634145 5.5673,0.0378 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path370"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_104"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 285.44854,124.37825 -3.01547,3.44672 -4.54775,-6.54879 3.0255,-3.45222 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path373"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_105"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 376.27856,93.009582 -5.44093,-0.310158 -4.32036,-6.637255 5.45256,0.307408 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path376"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_106"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 282.43307,127.82497 -2.64817,3.52478 -4.55705,-6.54339 2.65747,-3.53018 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path379"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_107"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 381.57539,93.58773 -5.29683,-0.578148 -4.30873,-6.640005 5.3079,0.575773 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path382"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_108"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 279.7849,131.34975 -2.26579,3.58373 -4.5656,-6.53812 2.27434,-3.589 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path385"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_109"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 386.69893,94.431174 -5.12354,-0.843444 -4.29766,-6.64238 5.134,0.84146 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path388"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_110"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 277.51911,134.93348 -1.87035,3.62321 -4.57333,-6.53303 1.87808,-3.6283 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path391"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_111"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 391.62081,95.535793 -4.92188,-1.104619 -4.2872,-6.644364 4.93167,1.103038 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path394"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_112"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 275.64876,138.55669 -1.4639,3.6429 -4.5802,-6.52812 1.47077,-3.64781 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path397"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_113"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 396.31365,96.896048 -4.69284,-1.360255 -4.27741,-6.645945 4.70188,1.359088 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path400"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_114"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 274.18486,142.19959 -1.04858,3.64265 -4.58617,-6.52344 1.05455,-3.64733 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path403"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_115"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 400.75115,98.504997 -4.4375,-1.608949 -4.26837,-6.647112 4.44578,1.608206 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path406"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_116"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 273.13628,145.84224 -0.62662,3.62234 -4.5912,-6.519 0.63165,-3.62678 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path409"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_117"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 404.90833,100.35432 -4.15718,-1.849323 -4.26009,-6.647855 4.16463,1.849014 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path412"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_118"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 272.50966,149.46458 -0.20024,3.58202 -4.59527,-6.51482 0.20431,-3.5862 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path415"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_119"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 408.76159,102.43436 -3.85326,-2.08004 -4.25264,-6.648164 3.85983,2.080164 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path418"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_120"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 272.30942,153.0466 0.22822,3.52181 -4.59835,-6.51094 -0.22514,-3.52569 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path421"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_121"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 412.28889,104.73415 -3.5273,-2.29979 -4.24607,-6.64804 3.53296,2.300346 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path424"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_122"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 272.53764,156.56841 0.65643,3.44194 -4.6004,-6.50737 -0.65438,-3.44551 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path427"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_123"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 415.46988,107.24145 -3.18099,-2.5073 -4.24041,-6.647484 3.1857,2.508304 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path430"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_124"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 273.19407,160.01035 1.08205,3.34277 -4.60142,-6.50413 -1.08103,-3.34601 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path433"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_125"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 418.28601,109.94284 -2.81613,-2.70139 -4.2357,-6.64648 2.81986,2.70281 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path436"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_126"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 274.27612,163.35312 1.50269,3.22474 -4.60139,-6.50126 -1.50272,-3.22761 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path439"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_127"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 420.72067,112.82374 -2.43466,-2.8809 -4.23197,-6.64506 2.4374,2.88276 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path442"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_128"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 275.77881,166.57786 1.916,3.08841 -4.60031,-6.49874 -1.91708,-3.09093 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path445"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_129"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 422.75929,115.86849 -2.03862,-3.04475 -4.22923,-6.6432 2.04033,3.04702 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path448"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_130"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 277.69481,169.66627 2.31962,2.93447 -4.59818,-6.49663 -2.32175,-2.93658 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path451"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_131"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 424.38947,119.06044 -1.63018,-3.19195 -4.22752,-6.64093 1.63085,3.19464 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path454"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_132"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 280.01443,172.60074 2.71126,2.76367 -4.59501,-6.49491 -2.71443,-2.76539 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path457"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_133"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 425.601,122.38204 -1.21153,-3.3216 -4.22685,-6.63824 1.21116,3.32469 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path460"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_134"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 282.72569,175.36441 3.08861,2.5769 -4.5908,-6.4936 -3.09282,-2.57821 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path463"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_135"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 426.38604,125.8149 -0.78504,-3.43286 -4.22722,-6.63515 0.78361,3.43632 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path466"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_136"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 285.8143,177.94131 3.4495,2.37515 -4.58559,-6.49271 -3.45471,-2.37604 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path469"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_137"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 426.73911,129.33991 -0.35307,-3.52501 -4.22865,-6.63169 0.35059,3.52884 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path472"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_138"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 289.2638,180.31646 3.79177,2.15949 -4.57939,-6.49226 -3.79797,-2.15994 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path475"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_139"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 426.65717,132.93736 0.0819,-3.59745 -4.23113,-6.62786 -0.0854,3.60161 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path478"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_140"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 293.05557,182.47595 4.11336,1.93107 -4.57223,-6.49224 -4.12052,-1.93109 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path481"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_141"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 426.13967,136.587 0.5175,-3.64964 -4.23464,-6.6237 -0.52204,3.65412 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path484"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_142"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 297.16893,184.40702 4.41236,1.69119 -4.56417,-6.49267 -4.42042,-1.69076 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path487"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_143"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 425.18857,140.2682 0.9511,-3.6812 -4.23918,-6.61922 -0.95664,3.68598 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path490"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_144"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 301.58129,186.09821 4.68689,1.44113 -4.55521,-6.49353 -4.69585,-1.44027 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path493"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_145"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 423.80836,143.96007 1.38021,-3.69187 -4.24472,-6.61444 -1.38673,3.69691 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path496"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_146"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 306.26818,187.53934 4.93531,1.18233 -4.54545,-6.49482 -4.94507,-1.18104 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path499"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_147"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 422.00602,147.64155 1.80234,-3.68148 -4.25124,-6.6094 -1.8098,3.68676 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path502"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_148"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 311.20349,188.72167 5.15601,0.91626 -4.5349,-6.49656 -5.16656,-0.91452 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path505"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_149"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 419.79105,151.29158 2.21497,-3.65003 -4.2587,-6.60412 -2.22334,3.6555 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path508"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_150"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 316.3595,189.63793 5.34763,0.64444 -4.52365,-6.49871 -5.35888,-0.64229 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path511"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_151"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <defs
+           id="defs515">
+          <path
+             d="m 389.13036,-471.79541 4.89623,-2.67933 4.64098,-2.86483 4.35911,-3.03364 4.05235,-3.18482 3.72256,-3.31748 3.37174,-3.43089 3.00204,-3.52443 2.61568,-3.59759 2.21497,-3.65002 1.80234,-3.68149 1.38021,-3.69187 0.9511,-3.6812 0.5175,-3.64964 0.0819,-3.59745 -0.35307,-3.52501 -0.78504,-3.43286 -1.21153,-3.3216 -1.63018,-3.19195 -2.03862,-3.04475 -2.43466,-2.8809 -2.81613,-2.70139 -3.18099,-2.5073 -3.5273,-2.29979 -3.85326,-2.08004 -4.15718,-1.84932 -4.4375,-1.60895 -4.69284,-1.36026 -4.92188,-1.10462 -5.12354,-0.84344 -5.29683,-0.57815 -5.44093,-0.31016 -5.55517,-0.0409 -5.63905,0.22818 -5.6922,0.49567 -5.71441,0.76019 -5.70565,1.02032 -5.666,1.27473 -5.59572,1.52209 -5.49521,1.76111 -5.36501,1.99056 -5.2058,2.20922 -5.01844,2.41598 -4.80385,2.60973 -4.56318,2.78945 -4.29762,2.95419 -4.00854,3.10306 -3.69742,3.23524 -3.36582,3.35001 -3.01547,3.44672 -2.64817,3.52478 -2.26579,3.58373 -1.87035,3.62321 -1.4639,3.64291 -1.04858,3.64264 -0.62662,3.62234 -0.20024,3.58202 0.22822,3.52181 0.65643,3.44194 1.08205,3.34277 1.50269,3.22474 1.916,3.08841 2.31962,2.93447 2.71126,2.76367 3.08861,2.5769 3.4495,2.37515 3.79177,2.15949 4.11336,1.93108 4.41236,1.69118 4.68689,1.44113 4.93531,1.18233 5.15601,0.91626 5.34763,0.64444 5.50893,0.36844 5.63885,0.0899 5.73653,-0.18961 5.80131,-0.46837 5.83273,-0.74475 5.83051,-1.01711 5.79462,-1.28381 5.72522,-1.54326 5.62271,-1.7939 5.48765,-2.03423 5.32085,-2.2628 z"
+             id="m60f96fa6d0"
+             style="stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             inkscape:connector-curvature="0" />
+        </defs>
+        <g
+           clip-path="url(#p3a483a4801)"
+           id="g519"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             style="fill:#808080;fill-opacity:0.5;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             x="0"
+             xlink:href="#m60f96fa6d0"
+             y="648.71997"
+             id="use517"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="Poly3DCollection_152"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 417.17537,154.88917 2.61568,-3.59759 -4.26707,-6.59865 -2.6249,3.60325 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path522"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_153"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 321.70713,190.28237 5.50893,0.36844 -4.51175,-6.50128 -5.52083,-0.36587 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path525"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_154"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 414.17333,158.41359 3.00204,-3.52442 -4.27629,-6.59299 -3.01207,3.53021 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path528"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_155"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 327.21606,190.65081 5.63885,0.0899 -4.49927,-6.50425 -5.65133,-0.0869 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path531"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_156"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 410.80159,161.84449 3.37174,-3.4309 -4.28632,-6.5872 -3.38253,3.43679 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path534"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_157"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 332.85491,190.74069 5.73653,-0.1896 -4.48628,-6.50762 -5.74952,0.19297 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path537"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_158"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 407.07903,165.16197 3.72256,-3.31748 -4.29711,-6.58131 -3.73403,3.32345 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path540"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_159"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 338.59144,190.55109 5.80131,-0.46837 -4.47287,-6.51134 -5.81472,0.47209 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path543"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_160"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 403.02668,168.34679 4.05235,-3.18482 -4.30858,-6.57534 -4.06444,3.19081 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path546"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_161"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 344.39275,190.08272 5.83273,-0.74475 -4.45911,-6.51542 -5.84649,0.74883 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path549"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_162"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 398.66757,171.38043 4.35911,-3.03364 -4.32067,-6.56935 -4.37177,3.03964 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path552"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_163"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 350.22548,189.33797 5.83051,-1.01711 -4.44508,-6.51983 -5.84454,1.02152 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path555"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_164"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 394.02659,174.24526 4.64098,-2.86483 -4.33333,-6.56335 -4.65411,2.87077 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path558"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_165"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 356.05599,188.32086 5.79462,-1.28381 -4.43086,-6.52453 -5.80884,1.28851 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path561"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_166"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 389.13036,176.92459 4.89623,-2.67933 -4.34646,-6.55741 -4.90977,2.68521 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path564"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_167"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 361.85061,187.03705 5.72522,-1.54326 -4.41654,-6.52951 -5.73954,1.54824 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path567"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_168"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 384.00704,179.40286 5.12332,-2.47827 -4.36,-6.55153 -5.13717,2.48403 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path570"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_169"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 367.57583,185.49379 5.62271,-1.7939 -4.40222,-6.53472 -5.63703,1.79911 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path573"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_170"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <defs
+           id="defs577">
+          <path
+             d="m 384.77036,-478.34694 4.90977,-2.68521 4.65411,-2.87077 4.37177,-3.03964 4.06444,-3.19081 3.73403,-3.32345 3.38253,-3.43678 3.01207,-3.53022 2.6249,-3.60325 2.22334,-3.6555 1.8098,-3.68676 1.38673,-3.69691 0.95664,-3.68598 0.52204,-3.65412 0.0854,-3.60161 -0.35059,-3.52884 -0.78361,-3.43632 -1.21116,-3.32469 -1.63085,-3.19464 -2.04033,-3.04702 -2.4374,-2.88276 -2.81986,-2.70281 -3.1857,-2.5083 -3.53296,-2.30035 -3.85983,-2.08016 -4.16463,-1.84902 -4.44578,-1.6082 -4.70188,-1.35909 -4.93167,-1.10304 -5.134,-0.84146 -5.3079,-0.57577 -5.45256,-0.30741 -5.5673,-0.0378 -5.6516,0.23163 -5.70512,0.49944 -5.72762,0.76426 -5.71909,1.02466 -5.67959,1.27933 -5.60939,1.52692 -5.5089,1.76614 -5.37863,1.99576 -5.2193,2.21457 -5.03173,2.42145 -4.81688,2.61528 -4.57587,2.79508 -4.3099,2.95985 -4.02035,3.10873 -3.70868,3.24088 -3.3765,3.35561 -3.0255,3.45222 -2.65747,3.53018 -2.27434,3.589 -1.87808,3.62831 -1.47077,3.6478 -1.05455,3.64733 -0.63165,3.62679 -0.20431,3.58619 0.22514,3.52569 0.65438,3.44551 1.08103,3.34601 1.50272,3.22762 1.91708,3.09092 2.32175,2.93658 2.71443,2.76539 3.09282,2.57821 3.45471,2.37604 3.79797,2.15994 4.12052,1.93109 4.42042,1.69076 4.69585,1.44027 4.94507,1.18104 5.16656,0.91453 5.35888,0.64228 5.52083,0.36587 5.65133,0.0869 5.74952,-0.19297 5.81472,-0.47209 5.84649,-0.74883 5.84454,-1.02152 5.80884,-1.28851 5.73954,-1.54823 5.63703,-1.79912 5.50191,-2.03966 5.33496,-2.26842 z"
+             id="mb8f85b5f59"
+             style="stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             inkscape:connector-curvature="0" />
+        </defs>
+        <g
+           clip-path="url(#p3a483a4801)"
+           id="g581"
+           style="stroke-linecap:butt;stroke-linejoin:round">
+          <use
+             style="fill:#808080;fill-opacity:0.5;stroke:#000000;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:0.5"
+             x="0"
+             xlink:href="#mb8f85b5f59"
+             y="648.71997"
+             id="use579"
+             width="100%"
+             height="100%" />
+        </g>
+      </g>
+      <g
+         id="Poly3DCollection_171"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 373.19854,183.69989 5.48765,-2.03423 -4.38796,-6.54015 -5.50191,2.03966 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path584"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="Poly3DCollection_172"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           clip-path="url(#p3a483a4801)"
+           d="m 378.68619,181.66566 5.32085,-2.2628 -4.37385,-6.54577 -5.33496,2.26842 z"
+           style="fill:#808080;fill-opacity:0.5;stroke-linecap:butt;stroke-linejoin:round"
+           id="path587"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+  <defs
+     id="defs595">
+    <clipPath
+       id="p3a483a4801"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         height="622.05042"
+         width="828.01123"
+         x="13.314392"
+         y="13.3348"
+         id="rect592"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+  </defs>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.04999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+     d="M 326.99291,183.78517 213.4507,60.814622"
+     id="path5398"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.04999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-2)"
+     d="M 326.17809,200.27746 298.53828,357.68617"
+     id="path5398-7"
+     inkscape:connector-curvature="0"
+     inkscape:transform-center-x="-38.178609"
+     inkscape:transform-center-y="-62.754875" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.18433702;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-4)"
+     d="M 110.54205,332.98522 79.915487,82.634807"
+     id="path5398-1"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0235095;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-4-2)"
+     d="m 123.45972,348.43881 48.16387,11.17212"
+     id="path5398-1-9"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path8035"
+     d="M 110.54205,332.98521 146.35335,141.2611"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.98500329;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker8039)" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path9091"
+     d="m 123.45972,348.43881 110.23352,70.35022"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.02689385;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9095)" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="297.16498"
+     y="432.63876"
+     id="text10815"><tspan
+       sodipodi:role="line"
+       id="tspan10813"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       x="297.16498"
+       y="432.63876">$x_0$</tspan></text>
+  <text
+     id="text10819"
+     y="315.73535"
+     x="237.91106"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       y="315.73535"
+       x="237.91106"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       id="tspan10817"
+       sodipodi:role="line">$z_0$</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="339.55966"
+     y="340.95749"
+     id="text10823"><tspan
+       sodipodi:role="line"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       x="339.55966"
+       y="340.95749"
+       id="tspan10825">$y_0$</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="90.337967"
+     y="21.236479"
+     id="text11879"><tspan
+       sodipodi:role="line"
+       id="tspan11877"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       x="90.337967"
+       y="21.236479">$z_1$</tspan></text>
+  <text
+     id="text11883"
+     y="24.330547"
+     x="249.23108"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       id="tspan11881"
+       y="24.330547"
+       x="249.23108"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       sodipodi:role="line">$y_1$</tspan></text>
+  <text
+     id="text11887"
+     y="138.65974"
+     x="204.68362"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       y="138.65974"
+       x="204.68362"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       id="tspan11885"
+       sodipodi:role="line">$x_1$</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.69631195px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.71765906px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="3.5903797"
+     y="339.20486"
+     id="text1315"
+     transform="scale(0.98000073,1.0204074)"><tspan
+       sodipodi:role="line"
+       id="tspan1313"
+       style="stroke-width:0.71765906px;stroke-linecap:butt;stroke-linejoin:round"
+       x="3.5903797"
+       y="339.20486">Seilführungen 2/3</tspan></text>
+  <text
+     transform="scale(0.98000073,1.0204074)"
+     id="text1659"
+     y="192.64273"
+     x="276.87253"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.69631195px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.71765906px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       y="192.64273"
+       x="276.87253"
+       style="stroke-width:0.71765906px;stroke-linecap:butt;stroke-linejoin:round"
+       id="tspan1657"
+       sodipodi:role="line">Seilführung 1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="261.16379"
+     y="220.59573"
+     id="text1754"><tspan
+       sodipodi:role="line"
+       id="tspan1752"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       x="261.16379"
+       y="220.59573">$\ell_1$</tspan></text>
+  <text
+     id="text1758"
+     y="288.0704"
+     x="197.73927"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       y="288.0704"
+       x="197.73927"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       id="tspan1756"
+       sodipodi:role="line">$\ell_3$</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="138.47556"
+     y="250.78229"
+     id="text1762"><tspan
+       sodipodi:role="line"
+       id="tspan1760"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       x="138.47556"
+       y="250.78229">$\ell_2$</tspan></text>
+</svg>

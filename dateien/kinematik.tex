@@ -1,4 +1,5 @@
-\chapter{Modellierung der direkten Kinematik}
+\chapter{Modellierung der Vorwärtskinematik}
+\label{ch:vorwaertskinematik}
 
 In diesem Kapitel wird die direkte Kinematik eines seilzugaktuierten Kontinuumroboters bestehend aus zwei Abschnitten aufgestellt. Im Allgemeinen bezeichnet die direkte Kinematik 
 %
@@ -7,8 +8,8 @@ In diesem Kapitel wird die direkte Kinematik eines seilzugaktuierten Kontinuumro
 f(\bm{q}) = \bm{x}_\mathrm{E}
 \end{equation}
 %
-den geometrischen Zusammenhang zwischen den $m$ Gelenkwinkeln $\bm{q} = \left[q_1, q_2, ..., q_m \right]^\transpose $ des Roboters und der daraus resultierenden Position und Lage Endeffektors~$\bm{x}_\mathrm{E}$.
-$\bm{x}_\mathrm{E} = \left[x_\mathrm{E}, y_\mathrm{E}, z_\mathrm{E}, \phi_\mathrm{E}, \psi_\mathrm{E}, \theta_\mathrm{E} \right]^\transpose $. Hierbei entspricht $m$ der Anzahl der Gelenkwinkel und $\bm{x}_\mathrm{E}$ den kartesischen Raumkoordinaten sowie der Orientierung des Endeffektors. Die Orientierung ist hier zunächst durch die Verwendung von drei Winkeln $\phi_\mathrm{E}, \psi_\mathrm{E}$ und $\theta_\mathrm{E}$ dargestellt. 
+den geometrischen Zusammenhang zwischen den $m$ Gelenkwinkeln $\bm{q} = \left[q_1, q_2, ..., q_m \right]^\transpose $ des Roboters und der daraus resultierenden Position und Orientierung Endeffektors~$\bm{x}_\mathrm{E}$.
+$\bm{x}_\mathrm{E} = \left[x_\mathrm{E}, y_\mathrm{E}, z_\mathrm{E}, \varphi_\mathrm{E}, \psi_\mathrm{E}, \theta_\mathrm{E} \right]^\transpose $. Hierbei entspricht $m$ der Anzahl der Gelenkwinkel und $\bm{x}_\mathrm{E}$ den kartesischen Raumkoordinaten sowie der Orientierung des Endeffektors. Die Orientierung ist hier zunächst durch die Verwendung von drei Winkeln $\phi_\mathrm{E}, \psi_\mathrm{E}$ und $\theta_\mathrm{E}$ dargestellt. 
 Die direkte Kinematik lässt sich auf die Gelenkwinkelgeschwindikeiten $f(\bm{\dot{q}}) = \bm{\dot{x}}_\mathrm{E} $ und -beschleunigungen $f(\bm{\ddot{q}}) = \bm{\ddot{x}}_\mathrm{E}$ erweitern. Im späteren Verlauf dieser Arbeit wird die inverse Kinematik
 %
 \begin{align}
@@ -22,7 +23,7 @@ f^{-1}(\bm{x}_\mathrm{E}) = \bm{q},
 % Zeichne Blöcke mit innerem Text
 \node[name=center] {};
 \node[simplebox, minimum size=1.5cm, left of=center, name=q, color=imesblue, label={[align=center]:Gelenk-\\ winkel}, label={[align=center]below:Gelenk-\\ raum}] {\textblack{$\bm{q}$}};
-\node[simplebox, minimum size=1.5cm, right of=center, name=x, label={[align=center]:Position,\\ Lage}, label={[align=center]below:Arbeits-\\ raum}] {\textblack{$\bm{x}_\mathrm{E}$}};
+\node[simplebox, minimum size=1.5cm, right of=center, name=x, label={[align=center]:Position,\\ Orientierung}, label={[align=center]below:Arbeits-\\ raum}] {\textblack{$\bm{x}_\mathrm{E}$}};
 % berechne Punkte für verschobene Linien zwischen Boxen
 \path (q.east) -- (q.north east) coordinate[pos=0.5] (q1);
 \path (q.east) -- (q.south east) coordinate[pos=0.5] (q2);
@@ -99,6 +100,11 @@ Erkläre hier, dass $f^{-1}_\mathrm{s}$ von Bogenparametern zu Seillängen bekan
 INSERT GRAPHIC HERE VON WEGEN MIT EINEM KREISBOGEN UND DEN PARAMETERN UND DEN KOORDINATEN
 \section{Die roboterspezifische Kinematik}
 \label{sec:spezifischeKinematik}
+
+Direkte Kinematik bereits etablierte Modelle für konstante Krümmungen. Es wird das kinematische Modell aus "Kinematics for Multisection Continuum Robots" \cite{JW06} verwendet. Es liefert eine geometrische Zusammenhänge zwischen der Aktuierung der Seilzüge und der daraus resultierende Krümmung des kontinuierlichen Manipulators.
+
+
+Seilzugaktuierte können entweder über kompressibel Federn gestützt oder über antagonistische Seilzüge bedient werden, um Kompressibilität in einem Segment umzusetzen. Inkompressibles Design ist populär. In dieser Arbeit wird aber kompressibel Design gewählt.
 
 Die roboterspezifische Kinematik stellt den direkten Zusammenhang zwischen den entsprechenden Gelenkwinkeln im Gelenkraum und den Bogenparametern im Konfigurationsraum her. Die auf die Roboterstruktur wirkenden Kräfte und Momente der Aktuatoren sind für die tatsächliche Formgebung relevant. Über eine Untersuchung der auf den Roboter wirkenden Kräfte und Momente kann im Allgemeinen die roboterspezifische Funktion~\eqref{eq:fspezifisch} ermittelt werden. Für den hier betrachteten seilzugaktuierten Kontinuumsroboter werden folgende Vereinfachungen für die Modellierung der roboterspezifischen Kinematik getroffen:
 

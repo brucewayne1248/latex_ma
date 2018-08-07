@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'configuration_space02.pdf' (pdf, eps, ps)
+%% Accompanies image file 'arc_geometry.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{243.77952756bp}%
+    \setlength{\unitlength}{180.02888236bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,18 +50,21 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.37209302)%
+  \begin{picture}(1,1.30935697)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{configuration_space02.pdf}}%
-    \put(0.13528113,0.06068704){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$x$\end{tabular}}}}%
-    \put(0.73179422,0.26649936){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
-    \put(0.3388704,0.60696358){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{configuration_space02.pdf}}%
-    \put(0.47791068,1.16399224){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$\ell$\end{tabular}}}}%
-    \put(0.56388882,0.614434){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r=\frac{1}{\kappa}$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{configuration_space02.pdf}}%
-    \put(0.3784665,0.10930084){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\varphi$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{configuration_space02.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{arc_geometry.pdf}}%
+    \put(0.70195268,0.64600296){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r=1/\kappa$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{arc_geometry.pdf}}%
+    \put(0.66516548,0.26674617){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\theta$\end{tabular}}}}%
+    \put(0.98914205,0.24580967){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$x$\end{tabular}}}}%
+    \put(0.10848129,1.03854212){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
+    \put(0.8490552,0.14822531){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$r$\end{tabular}}}}%
+    \put(0.09022527,1.1798884){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\bm{p}=[r(1-\cos\theta),0,r\sin\theta]^\transpose$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{arc_geometry.pdf}}%
+    \put(0.6199022,0.97158841){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\bm{p}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{arc_geometry.pdf}}%
+    \put(0.70622101,0.14971346){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$r(1-\cos\theta)$\end{tabular}}}}%
+    \put(0.30993677,0.89907202){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$\ell$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

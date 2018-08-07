@@ -33,11 +33,28 @@
 *.db
 *.nlo
 
-# bilder ignorieren
+# ignore inkscape files and pictures ignorieren
 *.pdf
 *.jpg
 *.png
+*.svg
+*.pdf_tex
 
 # exceptions for small pictures/files
 !/bilder/titel/CoverLogos.pdf
 !/bilder/titel/Titelbild_Bender.jpg
+
+# exceptions for pdf files and svg files created within inkscape if they are small
+!/bilder/standdertechnik/arc_geometry.pdf
+!/bilder/standdertechnik/arc_geometry.pdf_tex
+!/bilder/standdertechnik/arc_geometry.svg
+!/bilder/standdertechnik/base.pdf
+!/bilder/standdertechnik/base.pdf_tex
+!/bilder/standdertechnik/base.svg
+!/bilder/standdertechnik/configuration_space02.pdf
+!/bilder/standdertechnik/configuration_space02.svg
+!/bilder/standdertechnik/configuration_space02.pdf_tex
+!/bilder/standdertechnik/continuum_robot3d.pdf
+!/bilder/standdertechnik/continuum_robot3d.pdf_tex
+!/bilder/standdertechnik/continuum_robot3d.svg
+

@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'configuration_space01.pdf' (pdf, eps, ps)
+%% Accompanies image file 'base.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{243.77952756bp}%
+    \setlength{\unitlength}{650.34006194bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,17 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.5)%
+  \begin{picture}(1,0.76561356)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{configuration_space01.pdf}}%
-    \put(0.14181828,0.07759662){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$x$\end{tabular}}}}%
-    \put(0.73833137,0.28340894){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
-    \put(0.34540753,0.6238728){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{configuration_space01.pdf}}%
-    \put(0.48444783,1.18090146){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}$\ell$\end{tabular}}}}%
-    \put(0.52137135,0.77210555){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$r=\frac{1}{\kappa}$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{configuration_space01.pdf}}%
-    \put(0.32731832,0.12736405){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\phi$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{base.pdf}}%
+    \put(0.55286154,0.45089502){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.24999988}\smash{\begin{tabular}[t]{l}$\varphi_1=90\degree$\end{tabular}}}}%
+    \put(0.40300609,0.23369434){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.24999988}\smash{\begin{tabular}[t]{l}$\varphi_2=\text{-}150\degree$\end{tabular}}}}%
+    \put(0.57633892,0.3191825){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.24999988}\smash{\begin{tabular}[t]{l}$\varphi_3=\text{-}30\degree$\end{tabular}}}}%
+    \put(0.91335799,0.37641513){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
+    \put(0.4833506,0.72261932){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{base.pdf}}%
+    \put(0.29596171,0.32919534){\rotatebox{26.205233}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$d$\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{base.pdf}}%
   \end{picture}%
 \endgroup%

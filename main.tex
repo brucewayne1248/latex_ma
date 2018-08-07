@@ -10,7 +10,7 @@
 {Andreas Serov}
 \newcommand{\Matrikelnummer}%       % Matrikelnummer
 {2871560}
-\newcommand{\Datum}%       % Abgabedatum
+\newcommand{\Datum}%       				 % Abgabedatum
 {30. September 2018}
 
 % ------------------------------------------------------------------------------------------
@@ -54,7 +54,8 @@
 \ifpdf
     \hypersetup{
     %   colorlinks,  % Links mit farbigem Text
-        pdftitle    = {Kinematikmodellierung eines Multibackbone Kontinuumroboters mittels Maschinellem Lernen},
+    %    pdftitle    = {Kinematikmodellierung eines Multibackbone Kontinuumroboters mittels Maschinellem Lernen},
+        pdftitle    = {Modellierung der inversen Kinematik eines seilzugaktuierten Kontinuumroboters mittels Reinforcement Learning},
         pdfsubject  = {Masterarbeit},
         pdfauthor   = {\Autor},
         pdfkeywords = {Kontinuumsrobotik, Kinematik, Maschinelles Lernen}
@@ -96,14 +97,14 @@
     \setcounter{page}{1}
     \pdfbookmark[0]{\contentsname}{toc}
     \tableofcontents                        % Inhaltsverzeichnis
-    %\listoffigures
+    \listoffigures
     %\listoftables
 		\input{dateien/nomenklatur}           % Beschreibungen der verwendeten Abkürzungen und Variablen
     \mainmatter                             % der eigentliche Tex
     \setcounter{page}{1} % bei i anfangen
   	 	%\input{dateien/einleitung}										% die einzelnen Kapitel einbinden
 		\input{dateien/standdertechnik}
-		\input{dateien/kinematik}
+		%\input{dateien/kinematik}
 		%\input{dateien/tipps}
 		%\input{dateien/vorlage_betreuer}
 		%\input{dateien/robotersysteme}
