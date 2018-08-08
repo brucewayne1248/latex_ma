@@ -44,8 +44,8 @@
      showgrid="false"
      units="mm"
      inkscape:zoom="2"
-     inkscape:cx="105.53669"
-     inkscape:cy="394.6009"
+     inkscape:cx="132.78669"
+     inkscape:cy="331.1009"
      inkscape:window-x="61"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -2265,7 +2265,7 @@
        id="tspan1752"
        style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
        x="261.16379"
-       y="220.59573">$\ell_1$</tspan></text>
+       y="220.59573">$l_1$</tspan></text>
   <text
      id="text1758"
      y="288.0704"
@@ -2276,7 +2276,7 @@
        x="197.73927"
        style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
        id="tspan1756"
-       sodipodi:role="line">$\ell_3$</tspan></text>
+       sodipodi:role="line">$l_3$</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2287,5 +2287,16 @@
        id="tspan1760"
        style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
        x="138.47556"
-       y="250.78229">$\ell_2$</tspan></text>
+       y="250.78229">$l_2$</tspan></text>
+  <text
+     id="text3925"
+     y="224.15729"
+     x="215.35056"
+     style="font-style:normal;font-weight:normal;font-size:9.99999905px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       y="224.15729"
+       x="215.35056"
+       style="stroke-width:0.74999994px;stroke-linecap:butt;stroke-linejoin:round"
+       id="tspan3923"
+       sodipodi:role="line">$\ell$</tspan></text>
 </svg>
