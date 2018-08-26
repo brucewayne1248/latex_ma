@@ -55,10 +55,10 @@
     \hypersetup{
     %   colorlinks,  % Links mit farbigem Text
     %    pdftitle    = {Kinematikmodellierung eines Multibackbone Kontinuumroboters mittels Maschinellem Lernen},
-        pdftitle    = {Modellierung der inversen Kinematik eines seilzugaktuierten Kontinuumroboters mittels Reinforcement Learning},
+        pdftitle    = {Modellierung der Inverskinematik eines Kontinuumsroboters mittels Reinforcement Learning},
         pdfsubject  = {Masterarbeit},
         pdfauthor   = {\Autor},
-        pdfkeywords = {Kontinuumsrobotik, Kinematik, Maschinelles Lernen}
+        pdfkeywords = {Kontinuumsrobotik, Kinematik, Maschinelles Lernen, Reinforcement Learning, seilzugaktuiert}
         }
 \else
 \fi
@@ -70,7 +70,7 @@
                                             % einfach mal nachschauen was so drin ist und eigene Befehle für
                                             % wiederholende Sachen definieren
 
-%\includeonly{dateien/kinematik}             % wenn nur ein Kapitel kompilliert werden soll
+%\includeonly{dateien/erlernen_inverskinematik}             % wenn nur ein Kapitel kompilliert werden soll
                                             % geht schneller wenn man nur das Layout des Kapitels sehen will
 
 %\entwurf                                   % Entwurfsdatum auf jede Seite setzen,
@@ -103,8 +103,9 @@
     \mainmatter                             % der eigentliche Tex
     \setcounter{page}{1} % bei i anfangen
   	 	%\input{dateien/einleitung}										% die einzelnen Kapitel einbinden
-		\input{dateien/standdertechnik}
+		%\input{dateien/standdertechnik}
 		%\input{dateien/kinematik}
+		\input{dateien/erlernen_inverskinematik}
 		%\input{dateien/tipps}
 		%\input{dateien/vorlage_betreuer}
 		%\input{dateien/robotersysteme}

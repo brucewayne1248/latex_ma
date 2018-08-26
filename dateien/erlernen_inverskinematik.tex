@@ -1,0 +1,449 @@
+\chapter{Erlernen der Inverskinematik mittels Reinforcement Learning}
+\label{ch:erlernen_inverskinematik}
+
+
+
+
+
+
+\section{Episodische Umgebung}
+\label{sec:umgebung_episode}
+
+Der episodische Ablauf des MEP bildet die Grundlage für die Generierung von Trajektorien des Agenten. Die Episoden sind so aufgebaut, dass der Agent von einer zufälligen Ausgangslage in eine Zielposition bzw. Ziellage navigieren muss. Die Gestaltung einer Episode wird in diesem Abschnitt behandelt. Es werden zwei Szenarien dargelegt, in denen einerseits die Orientierung der Ziellage vernachlässigt und andererseits die Orientierung berücksichtigt wird. Für beide Fälle werden die notwendigen Zustandsvektoren definiert und der Ablauf einer Episode in Algorithmen festgehalten.
+%Die Grundlage zur Trajektoriengenerierung bildet der episodische Ablauf des MEP. In Unterabschnitt~\ref{subsec:MEP} sind die einzelnen Komponenten eines episodischen MEP allgemein definiert. An dieser Stelle werden die relevanten Elemente hinsichtlich der Umgebung zum Erlernen der Inverskinematik detailliert beschrieben.  
+\newline
+
+Die Transitionsdynamik $\mathcal{T}( \bm{s}_{t+1} | \bm{s}_t, \bm{a}_t)$ beschreibt den Übergang vom Zustand $\bm{s}_{t}$ zum resultierenden Zustand $\bm{s}_{t+1}$ hervorgerufen durch die Aktion $\bm{a}_t$. Die Transitionsdynamik ist dem Agenten nicht bekannt. Der Agent weiß also nicht, welcher Zustand nach der von ihm ausgewählten Aktion folgt. Im Allgemeinen gilt, alles was außerhalb des Agenten geschieht, gehört zur Umgebung~\cite{SB98}. Um die Transitionsdynamik beschreiben zu können, ist eine Definition des Zustands notwendig. In dieser Arbeit werden zwei Szenarien unterschieden. Es wird die inverse Kinematik zum einen ohne Berücksichtigung der Orientierung und zum anderen mit Berücksichtigung der Orientierung ermittelt. Diese beiden Szenarien benötigen unterschiedliche Repräsentationen des Zustands. 
+
+Zunächst betrachten wird der Fall ohne Berücksichtigung der Orientierung behandelt. In anderen Worten soll der Kontinuumsroboter in eine Zielposition $\bm{x}_{\mathrm{E,p}}$ navigieren, wobei die Drehlage bzw. Ausrichtung des Endeffektors keine Rolle spielt. In diesem Fall definieren wir den Zustandsvektor der Position
+\begin{align}
+\bm{s}_{\mathrm{p}} = 
+\begin{bmatrix}
+\bm{l} \\ \bm{x}_{\mathrm{E,p}} \\ \bm{x}_{\mathrm{Z,p}} \\ d
+\end{bmatrix}.
+\label{eq:zustand_position}
+\end{align}
+
+Der Zustand beinhaltet die aktuellen Seillängen des Kontinuumsroboters $\bm{l}$, die Position des Endeffektors $\bm{x}_{\mathrm{E,p}}$, die Zielposition $\bm{x}_{\mathrm{Z,p}}$ und die Distanz zwischen der Zielposition und der aktuellen Endeffektorposition
+\begin{align}
+d = \left\Vert \bm{x}_{\mathrm{Z,p}} - \bm{x}_{\mathrm{E,p}} \right\Vert .
+\label{eq:distanz_endeffektor_ziel}
+\end{align}
+
+Die Betragsstriche entsprechen der euklidischen Norm.
+Die Zielposition ist während einer Episode konstant. Alle anderen Größen sind abhängig von der Initialisierung der Umgebung und den ausgeführten Aktionen des Agenten.
+
+Der Zustand, der von der Umgebung an den Agenten kommuniziert wird, muss alle notwendigen Informationen beinhalten, um das vorliegende Problem lösen zu können. Man kann behaupten, dass die aktuelle Position sowie die Zielposition ausreichend sind, um in die Zielposition zu navigieren. Denn wenn die Endeffektorposition der Zielposition unter Berücksichtigung eines Schwellwerts gleicht, ist das Ziel erreicht.
+Der verwendete Algorithmus zum Erlernen der inversen Kinematik trainiert eine Strategie, die durch ein neuronales Netz parametriert ist. Das neuronale Netz ist in der Lage aus dem gegebenen Zustand Zusammenhänge zu erkennen. 
+Aus diesem Grund werden zusätzlich die aktuellen Seillängen in den Zustand aufgenommen. Diese sollen der zu trainierenden Strategie die Möglichkeit eröffnen, den nichtlinearen Zusammenhang zwischen den Seillängen und der resultierenden Endeffektorposition zu erlernen. Der Agent ist dadurch in der Lage, die Vorwärtskinematik zu erlernen. 
+Außerdem ist die Distanz zum Zielpunkt~\eqref{eq:distanz_endeffektor_ziel} Teil des Zustands. Aus den Positionen des Ziels~$\bm{x}_{\mathrm{Z,p}}$ und des Endeffektors~$\bm{x}_{\mathrm{E,p}}$, kann das neuronale Netz prinzipiell die Beziehung der resultierenden Distanz eigenständig erlernen. Jedoch wird die Distanz explizit in jedem Zeitschritt ausgerechnet und dem Agenten zur Verfügung gestellt. Diese zusätzliche Information soll dem Agenten helfen den terminierenden Zustand zu erkennen, in dem das Ziel als erreicht gilt.
+
+Auf den Zustand~\eqref{eq:zustand_position} bezogen, kann die Aufgabe des Agenten folgerndermaßen zusammengefasst werden:
+gleiche durch Seillängenänderungen $\Delta\bm{l}$, die Endeffektorposition $\bm{x}_{\mathrm{E,p}}$ der Zielposition $\bm{x}_{\mathrm{Z,p}}$, wodurch gleichzeitig die Distanz $d$ minimiert wird. \newline
+
+Als nächstes soll die Orientierung Kontinuumsroboters bei der inversen Kinematik mitberücksichtigt werden. Wie bereits in Unterabschnitt~\ref{subsec:unabhaengige_vorwaertskinematik} erwähnt, gibt es diverse Möglichkeiten, die Orientierung mithilfe der Rotationsmatrix darzustellen. Aus der \textit{Bishop}-Rotationsmatrix, die Teil der \textit{Bishop}-Transformation ist, lässt sich direkt das \textit{Bishop}-Koordinatensystem
+\begin{align}
+\bm{R}_{\mathrm{B}} = 
+\begin{bmatrix}
+r_{11} & r_{12} & r_{13} \\
+r_{21} & r_{22} & r_{23} \\
+r_{31} & r_{32} & r_{33} 
+\end{bmatrix} = 
+\begin{bmatrix}
+\bm{n} & \bm{b} & \bm{t}
+\end{bmatrix}
+\label{eq:bishop_koordinatensystem}
+\end{align}
+
+ablesen. Der Normalenvektor $\bm{n}$ entspricht der neuen $x$-Achse, der Binormalenvektor $\bm{b}$ der neuen $y$-Achse und der Tangentenvektor $\bm{t}$ der neuen $z$-Achse. Bei den angegeben Vektoren handelt es sich um Einheitsvektoren. Das \textit{Bishop}-Koordinatensystem ist im Gegensatz zum \textit{Frenet}-Koordinatensystem hinsichtlich des kontinuierlichen Manipulators torsionsfrei transformiert. Aus diesem Grund wird Annahme getroffen, dass die Minimierung des Winkels zwischen dem Tangentenvektor des Kontinuumsroboters $\bm{t}_{\mathrm{E}}$ und dem Tangentenvektor des Zielkoordinatensystems $\bm{t}_{\mathrm{Z}}$ ausreichend ist, um die vorgegebene Orientierung des Zielpunkts einzustellen. Der Winkel zwischen den zwei Tangentenvektoren kann über den Kosinussatz
+\begin{align}
+\alpha = \cos^{-1} 
+\left( 
+\dfrac{\bm{t}_{\mathrm{Z}} \bm{t}_{\mathrm{E}} }
+{\left\Vert \bm{t}_{\mathrm{Z}}\right\Vert \left\Vert \bm{t}_{\mathrm{E}}\right\Vert} 
+\right)
+\label{eq:kosinussatz}
+\end{align}
+
+mit dem Wertebereich $[0~\pi]$ errechnet werden. Die Situation, in der sich der Kontinuumsroboter magenatefarbenen Zielpunkt befindet, jedoch nicht die richtige Orientierung zum Zielpunkt aufweist, ist in Bild~\ref{fig:orientation_2seg} dargestellt. Aus Gründen der Übersichtlichkeit ist nur der Tangentenvektor der Ziellage eingezeichnet. 
+\begin{figure}[!hbt]
+\centering
+\def\svgwidth{0.5\textwidth}
+\input{bilder/erlernen/orientation_2seg.pdf_tex}
+\caption[Darstellung des Winkels zwischen den Tangentenvektoren des Kontinuumsroboters und der Ziellage]{Darstellung des Winkels zwischen den Tangentenvektoren des Kontinuumsroboters und der Ziellage}
+\label{fig:orientation_2seg}
+\end{figure}
+
+Der Zustand der Position~\eqref{eq:zustand_position} wird um die Tangentenvektoren des Endeffektors und der Ziellage sowie den Winkel zwischen den Tangentenvektoren
+\begin{align}
+\bm{s} = 
+\begin{bmatrix}
+\bm{s}_{\mathrm{p}} \\ \bm{t}_{\mathrm{E}} \\ \bm{t}_{\mathrm{Z}} \\ \alpha
+\end{bmatrix}
+\label{eq:zustand_orientierung}
+\end{align} 
+
+erweitert. Der Agent muss hinsichtlich der Orientierung durch Seillängenänderungen $\Delta\bm{l}$ zusätzlich nun den Endeffektortangentenvektor $\bm{t}_{\mathrm{E}}$ dem Zieltangentenvektor $\bm{t}_{\mathrm{Z}}$ angleichen, sodass der Winkel $\alpha$ minimiert wird.
+Mit~\eqref{eq:zustand_position} und~\eqref{eq:zustand_orientierung} lässt sich die Transistionsdynamik $\mathcal{T}( \bm{s}_{t+1} | \bm{s}_t, \bm{a}_t)$ nun beschreiben. Durch die vom Agenten ausgeführte Aktion $\bm{a}_t = \Delta l$ verändert sich die Gelenkkonfiguration des Roboters. Es resultiert eine neue Endeffektorlage, die durch die Endeffektorposition $\bm{x}_{\mathrm{E}_{\mathrm{P}}}$ und den Tangentenvektor $\bm{t}_{\mathrm{E}}$ ausgedrückt wird. Aus der Position und dem Tangentenvektor werden im Verhältnis zur Ziellage die Distanz $d$ bzw. der Winkel $\alpha$ ausgerechnet. 
+
+Im folgenden soll der Ablauf einer zeitdiskreten Episode mit Episodendauert $T$ behandelt werden. Der Ablauf einer Episode für den Fall, indem der Agent lediglich die Zielposition erreichen soll ist in Algorithmus~\ref{alg:episode_position} aufgeführt. Es ist zu erwähnen, dass die Seillängen des kontinuierlichen Manipulators in den beiden Segmenten durch Seillängen $l_{1,\mathrm{min}}, l_{1,\mathrm{max}}$ und $l_{2,\mathrm{min}}, l_{2,\mathrm{max}}$ beschränkt sind. Die Seillängenänderungen des Agenten können dabei die Beschränkungen nicht verletzen. Würde eine Aktion eine Verletzung der Seillängenbeschränkung hervorrufen, wird jeweils der minimale bzw. maximale Wert der Seillängen eingestellt. 
+
+\begin{algorithm}[H]
+\caption[Ablauf einer Episode ohne Berücksichtigung der Orientierung]{Ablauf einer Episode ohne Berücksichtigung der Orientierung. 
+Zunächst werden die initialen Seillängen des Kontinuumsroboters~$\bm{l}_0$ und die Seillängen des Zielpunkts~$\bm{l}_\mathrm{Z}$ zufällig bestimmt. Die Werte liegen innerhalb der zulässigen Seillängen des jeweiligen Segments $l_{1,\mathrm{min}}, l_{1,\mathrm{max}}$ bzw. $l_{2,\mathrm{min}}, l_{2,\mathrm{max}}$ und sind gleich verteilt. Über die in Abschnitt~\ref{subsec:unabhaengige_vorwaertskinematik} bestimmte Vorwärtskinematik~$\bm{x}_{\mathrm{E_P}} = \bm{f}_\mathrm{u} \left( \bm{f}_\mathrm{s} \left( \bm{l} \right) \right)$ werden die Positionen des Endeffektors und des Zielpunkts bestimmt. Es wird der Abstand zum Ziel $\epsilon_d$ festgelegt, bei dem die Zielposition als erreicht gilt und die Episode vorzeitig beendet werden kann. Außerdem wird der Faktor $c_d > 1$ vorgegeben. Dieser verhindert, dass sich der kontinuierliche Manipulator zu weit von der Zielposition in Abhängigkeit von der Startdistanz $d_0$ entfernt. In diesem Fall wird die Episode vorzeitig abgebrochen.
+In jedem Zeitschritt ändert der Agent die Seillängen des Kontinuumsroboters abhängig vom Zustand $\Delta\bm{l}_t(\bm{s}_{\mathrm{p},t})$, erhält die Belohnung $r_{t+1}$ und geht in den neuen Zustand $\bm{s}_{\mathrm{p}, t+1}$ über. Während einer Episode wird der Mindestabstand zum Ziel $d_{\mathrm{min}}$ festgehalten.
+}
+\label{alg:episode_position}
+\begin{algorithmic}[1]
+\State Initialisiere: $\bm{l}_0$, $\bm{l}_\mathrm{Z}$
+\State Ermittle: 
+$\bm{x}_{\mathrm{E_{P}},0} = \bm{f}_\mathrm{u} \left( \bm{f}_\mathrm{s} \left( \bm{l} \right) \right)$, 
+$\bm{x}_\mathrm{Z_{P}} = \bm{f}_\mathrm{u} \left( \bm{f}_\mathrm{s} \left( \bm{l}_\mathrm{Z} \right) \right)$
+\State Lege fest: $\epsilon_d$, $c_d$
+\State $d_{\mathrm{min}} = d_0$
+\For{t = 0, \dots, T\shortminus1} 
+	\State $\bm{a}_t = \Delta \bm{l}_t (\bm{s}_{\mathrm{p}, t})$
+	\State Beobachte $\bm{s}_{\mathrm{p}, t+1}$ und erhalte $r_{t+1}$ bedingt durch $\bm{a}_t$
+	\If{$d_{t+1} < d_{\mathrm{min}}$}
+		\State $d_{\mathrm{min}} = d_{t+1}$
+	\EndIf
+	\If{$d_{t+1} < \epsilon_d$ \textbf{or} $d_{t+1} > d_0 + c_d \epsilon_d$}
+		 \State Episode vorzeitig beenden
+	\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+Der Verlauf einer Episode, in der der Agent nicht nur die Zielposition sondern auch die vorgegebe Orientierung einstellen soll, ist in Algorithmus~\ref{alg:episode_orientierung} gegeben. Die Algorithmen~\ref{alg:episode_position} und~\ref{alg:episode_orientierung} weisen Gemeinsamkeiten auf. Trotzdem werden an dieser Stelle beide Algorithmen vollständig dargestellt, um diese besser von einander unterscheiden zu können.
+
+\begin{algorithm}[H]
+\caption[Ablauf einer Episode mit Berücksichtigung der Orientierung]{Ablauf einer Episode mit Berücksichtigung der Orientierung. 
+Zunächst werden die initialen Seillängen des Kontinuumsroboters~$\bm{l}_0$ und die Seillängen des Zielpunkts~$\bm{l}_\mathrm{Z}$ zufällig bestimmt. Dabei liegen die Werte innerhalb der zulässigen Seillängen des jeweiligen Segments $l_{1,\mathrm{min}}, l_{1,\mathrm{max}}$ bzw. $l_{2,\mathrm{min}}, l_{2,\mathrm{max}}$ und sind gleich verteilt. Über die in Abschnitt~\ref{subsec:unabhaengige_vorwaertskinematik} bestimmte Vorwärtskinematik~$\bm{x}_{\mathrm{E_P}} = \bm{f}_\mathrm{u} \left( \bm{f}_\mathrm{s} \left( \bm{l} \right) \right)$ werden die Positionen des Endeffektors und des Zielpunkts bestimmt. 
+Zusätzlich werden die Tangentenvektoren $\bm{t}_\mathrm{E}$ und $\bm{t}_\mathrm{Z}$ errechnet.
+Es wird der Abstand zum Ziel $\epsilon_d$ festgelegt, bei dem die Zielposition als erreicht gilt.
+Außerdem wird der Schwellwert $\epsilon_\alpha$ gesetzt. Wenn der Winkel $\alpha$ zwischen den Tangentenvektoren des Kontinuumsroboters und der Zielorientierung unterhalb dieses Schwellwerts liegt, gilt die Orientierung als korrekt eingestellt.
+Wenn sowohl die Distanz als auch der Winkel zwischen den Tangentenvektoren unter den Schwellwerten liegen kann die Episode vorzeitig beendet werden. 
+Im vorliegenden Fall wird abweichend vom Algorithmus~\ref{alg:episode_position} die Episode nicht vorzeitig abgebrochen, wenn sich der Endeffektor in Abhängigkeit von der Startdistanz $d_0$ von der Zielposition entfernt. Dies ist damit begründet, dass sich der kontinuierliche Manipulator unter Umständen zuerst von der Zielposition entfernen muss, um die richtige Drehlage einzustellen, und dann erst in die Zielposition navigieren kann. 
+In jedem Zeitschritt ändert der Agent die Seillängen des Kontinuumsroboters abhängig vom Zustand $\Delta\bm{l}_t(\bm{s}_t)$, erhält die Belohnung $r_{t+1}$ und geht in den neuen Zustand $\bm{s}_{t+1}$ über. Während einer Episode wird der Mindestabstand zum Ziel $d_{\mathrm{min}}$ und der minimale Winkel zwischen den Tangentenvektoren $\alpha_{\mathrm{min}}$ festgehalten. Hierbei werden die minimalen Werte für den Abstand und den Winkel nur in Abhängigkeit von der minimalen Distanz zur Zielposition gesetzt.}
+\label{alg:episode_orientierung}
+\begin{algorithmic}[1]
+\State Initialisiere: $\bm{l}_0$, $\bm{l}_\mathrm{Z}$
+\State Ermittle: 
+$\bm{x}_{\mathrm{E_{P}},0} = \bm{f}_\mathrm{u} \left( \bm{f}_\mathrm{s} \left( \bm{l} \right) \right)$, 
+$\bm{x}_\mathrm{Z_{P}} = \bm{f}_\mathrm{u} \left( \bm{f}_\mathrm{s} \left( \bm{l}_\mathrm{Z} \right) \right)$ 
+und $\bm{t}_{\mathrm{E},0}$ und $\bm{t}_{Z}$
+\State Lege fest: $\epsilon_d$, $\epsilon_\alpha$
+\State $d_{\mathrm{min}} = d_0, \alpha_{\mathrm{min}} = \alpha_0$
+\For{t = 0, \dots, T\shortminus1} 
+	\State $\bm{a}_t = \Delta \bm{l}_t (\bm{s}_t)$
+	\State Beobachte $\bm{s}_{t+1}$ und erhalte $r_{t+1}$ bedingt durch $\bm{a}_t$
+	\If{$d_{t+1} < d_{\mathrm{min}}$}
+		\State $d_{\mathrm{min}} = d_{t+1}$
+		\State $\alpha_{\mathrm{min}} = \alpha_{t+1}$
+	\EndIf
+	\If{$d_{t+1} < \epsilon_d$ \textbf{and} $\alpha_{t+1} < \epsilon_\alpha$}
+		 \State Episode vorzeitig beenden
+	\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+
+
+
+\pagebreak
+\section{Belohnungsfunktion}
+\label{sec:belohnungsfunktion}
+
+In diesem Abschnitt wird die Rolle der Belohnungsfunktion im Zusammenhang mit der inversen Kinematik untersucht. Die Belohnungsfunktion definiert das Ziel oder beabsichtigtes Handeln des Agenten. \newline
+
+Das Erlernen der inversen Kinematik kann als Navigationsaufgabe interpretiert werden. Der Agent versucht über Seillängenänderungen in eine Zielposition bzw. Ziellage zu manövrieren. Dabei ist dem Agenten am Anfang des Trainings nicht bewusst, inwiefern bestimmte Änderungen der Roboterkonfiguration die Endeffektorlage beeinflussen. Die Belohnungsfunktion unterstützt den Agenten, sich in die Ziellage zu bewegen. 
+
+Für einfache Navigationsaufgaben ist die konstante Belohnung
+$\mathcal{R}(\bm{s}_t, \bm{a}_t, \bm{s}_{t+1})=-1$
+ein häufig gewählter Anreiz für den Agenten, um ein bestimmtes Ziel zu erreichen. Dieser Sachverhalt ist in Bild~\ref{fig:agent_umgebung} am Beispiel des Verlassen eines Labyrinths dargestellt. Diese Klasse von Aufgaben kann zu den sogenannten Gitterwelten (\textit{grid worlds}) gezählt werden, die häufig in der Fachliteratur als einfache Navigationsaufgaben behandelt werden~\cite{SB98}, \cite{NHR99}. Die konstante, negative Belohnung wird solange akkumuliert, bis das Ziel erreicht ist. Für einfache, planara Aufgaben ist diese simple Belohnungsfunktion ausreichend, solange sichergestellt ist, dass durch eine zufällige Abfolge von Aktionen das Ziel erreicht wird. Im Fall des Erlernens der Inverskinematik sind jedoch eine ausgeklügeltere Belohnungsfunktion notwendig, da man nicht davon ausgehen kann, dass die Ziellage durch zufällig gewählte Aktionen mit sechs Freiheitsgraden erreicht wird. Im Folgenden wird zunächst nur die Belohnungsfunktion für die inverse Kinematik ohne Berücksichtigung der Orientierung behandelt. Die gewonnenen Ergebnisse können auf die Belohnungsfunktion, die die Drehlage mitberücksichtigt übertragen werden. 
+
+Ng et al. beschreiben in~\cite{NHR99} inwiefern die Belohnungsfunktion erweitert werden kann, sodass die optimale Strategie eines RL-Problems erhalten bleibt (\textit{policy invariance}). Die Autoren nennen diesen Vorgang Belohungsmodellierung (\textit{reward shaping}), bei dem die Belohnungsfunktion erweitert wird:
+\begin{align}
+\mathcal{R}'(\bm{s}_t, \bm{a}_t, \bm{s}_{t+1}) = \mathcal{R}(\bm{s}_t, \bm{a}_t, \bm{s}_{t+1})
++ \mathcal{F}(\bm{s}_t, \bm{a}_t, \bm{s}_{t+1}).
+\label{eq:reward_shaping}
+\end{align}
+
+Die Erweiterung der Funktion 
+\begin{align}
+\mathcal{F}(\bm{s}_t, \bm{a}_t, \bm{s}_{t+1}) = \gamma \Phi(\bm{s}_{t+1}) - \Phi(\bm{s}_t)
+\label{eq:potential_belohnung}
+\end{align}
+
+besteht aus einer beliebigen Potentialfunktion $\Phi(\bm{s})$, die nur vom Zustand abhängt, und dem bereits eingeführten Diskontierungsfaktor $\gamma$. Ein simples Potential stellt zum Beispiel die Distanz zwischen zwei Objekten dar. Besitzt die Erweiterung der Funktion die angegebene Form, dann bleibt die optimale Strategie eines RL-Problems erhalten. Dieser Zusammenhang wird in zwei Theoremen festgehalten. Ein positiver Nebeneffekt ist, dass mithilfe einer geschickten Belohnungsmodellierung der Lernvorgang beim RL erheblich beschleunigt werden kann. Die Beschleunigung des Trainings ist der Hauptgrund, weswegen man zur Belohnungsmodellierung zurückgreift. Die Autoren resümieren jedoch, dass bei der praktischen Gestaltung von Belohnungsfunktionen die Vorgabe in~\eqref{eq:potential_belohnung} nicht zwingend eingehalten werden muss. Solange Expertenwissen in die Belohnungsfunktion einfließt, können Belohnungen beliebig gestaltet werden. Aus diesem Grund wird an die Belohnungsfunktion eine Bedingung geknüpft. Sie soll die inverse Kinematik in Bezug auf Qualitäts- und Fehlermaße bestmöglich erlernen. Diese Maße werden in Abschnitt~\ref{sec:auswertung} bei der Auswertung der Simulationsergebnisse definiert. 
+
+
+
+
+
+
+\section{Trust Region Policy Optimization}
+\label{sec:TRPO}
+
+In den zwei vorangegangen Abschnitten wurde dargestellt, wie die Datengenerierung in Episoden stattfindet und wie die Belohnungen des Agenten gestaltet werden. Nun folgt die Erklärung des in dieser Arbeit verwendten Algorithmus \textit{Trust Region Policy Optimization} (TRPO), mit welchem die Inverskinematik erlernt wird. TRPO ist ein iterativer Algorithmus, der zur Optimierung von hochdimensionalen parametrierten Strategien verwendet werden kann. Wesentliche Aspekte des Algorithmus werden nachfolgend verkürzt dargelegt~\cite{SLM+15}. \newline
+
+Zunächst wird der erwartete, diskontierte Ertrag
+\begin{align*} 
+\eta(\pi) = \mathds{E}_{\bm{s}_0, \bm{a}_0, \dots} 
+\left[ \sum\limits_{t=0}^{\infty} \gamma^t r(\bm{s}_t)\right]
+\end{align*}
+
+definiert, wobei 
+$\bm{s}_0 \sim \rho_0(\bm{s}_0)$, 
+$\bm{a}_t \sim \pi(\bm{a}_t,\bm{s}_t)$ und 
+$\bm{s}_{t+1} \sim  \mathcal{T}(\bm{s}_{t+1}|\bm{s}_t, \bm{a}_t)$. Der Operator $\sim$ besagt, dass die Stichproben der linksstehenden Variable gemäß der ihr folgenden Wahrscheinlichkeitsverteilung gewählt werden. Der erwartete Ertrag einer von $\pi$ abweichenden Strategie $\tilde{\pi}$ kann mithilfe des von $\pi$ abhängenden Vorteils aus~\eqref{eq:vorteil} wie folgt ausgedrückt werden:
+\begin{align}
+\eta(\tilde{\pi}) = \eta(\pi) + \mathds{E}_{\bm{s}_0, \bm{a}_0, \dots \sim \tilde{\pi}}
+\left[ \sum\limits_{t=0}^{\infty} \gamma^t A_\pi (\bm{s}_t, \bm{a}_t) \right].
+\label{eq:ertrag_durch_vorteil}
+\end{align}
+
+Die Aktionen in $\mathds{E}_{\bm{s}_0, \bm{a}_0, \dots \sim \tilde{\pi}} \left[ \dots \right]$ sind gemäß der anderen Strategie $\bm{a}_t \sim \tilde{\pi}(\cdot|\bm{s}_t)$ verteilt. Mit der diskontierten Besuchfrequenz (\textit{visitation frequency})
+\begin{align*}
+\rho_\pi(\bm{s}) = \mathcal{T}(\bm{s}_0=\bm{s})+\gamma\mathcal{T}(\bm{s}_1=\bm{s})+
+\gamma^2\mathcal{T}(\bm{s}_2=\bm{s})+ \dots
+\end{align*}
+
+kann die Gleichung~\eqref{eq:ertrag_durch_vorteil} umgeschrieben werden:
+\begin{align}
+\eta(\tilde{\pi}) &= \eta(\pi) 
++\sum\limits_{t=0}^{\infty} \sum\limits_{\bm{s}} \mathcal{T}(\bm{s}_t=\bm{s}|\tilde{\pi})
+\sum\limits_{\bm{a}}\tilde{\pi}(\bm{a}|\bm{s})\gamma^t A_\pi(\bm{s},\bm{a}) \nonumber \\
+&= \eta(\pi) 
++\sum\limits_{\bm{s}} \sum\limits_{t=0}^{\infty} \gamma^t \mathcal{T}(\bm{s}_t=\bm{s}|\tilde{\pi})
+\sum\limits_{\bm{a}}\tilde{\pi}(\bm{a}|\bm{s}) A_\pi(\bm{s},\bm{a}) \nonumber \\
+&= \eta(\pi) 
++\sum\limits_{\bm{s}} \rho_{\tilde{\pi}} (\bm{s})
+\sum\limits_{\bm{a}}\tilde{\pi}(\bm{a}|\bm{s}) A_\pi(\bm{s},\bm{a}) 
+\label{eq:}
+\end{align}
+
+Aus der Gleichung lässt sich folgern, dass eine Strategieaktualisierung 
+$\pi \rightarrow \tilde{\pi}$
+mit ausschließlich positiven Vorteilen 
+$\sum\limits_{\bm{a}}\tilde{\pi}(\bm{a}|\bm{s}) A_\pi(\bm{s},\bm{a}) \geq 0$
+den erwarteten Ertrag $\eta$ erhöht, oder konstant lässt, falls der Vorteil überall null ist. Im Allgemeinen wird jedoch nicht der exakte sondern nur der approximierte Vorteil ermittelt. Aus diesem Grund wird eine Annäherung von $\eta$ definiert:
+\begin{align}
+L_\pi(\tilde{\pi})= \eta(\pi) + \sum\limits_{\bm{s}}\rho_\pi(\bm{s})
+\sum\limits_{\bm{a}} \tilde{\pi}(\bm{a},\bm{s})A_\pi(\bm{s},a).
+\label{eq:approximation_eta}
+\end{align}
+
+Es ist anzumerken, dass $L_{\pi}$ unter Verwendung der Besuchfrequenz $\rho_{\pi}$ anstatt  $\rho_{\tilde{\pi}}$ gebildet wird. Damit werden Unterschiede der Besuchfrequenzen aufgrund abweichender Strategien ignoriert. Dies wird zugelassen, da bei parametrierten, differenzierbaren Strategien $\pi_{\theta}(\bm{a}|\bm{s})$ die Approximation $L_{\pi}$ und $\eta$ bis zum ersten Grad übereinstimmen. Im Speziellen gilt für eine beliebige Parametrierung $\bm{\theta}_0$:
+\begin{align}
+L_{\pi_{\bm{\theta}_0}}(\pi_{\bm{\theta}_0}) &= \eta(\pi_{\bm{\theta}_0}), \nonumber \\
+\nabla_{\bm{\theta}} L_{\pi_{\bm{\theta}_0}} \vert_{\bm{\theta=\bm{\theta}_0}} &=
+\nabla_{\bm{\theta}} \eta(\pi_{\bm{\theta}})\vert_{\bm{\theta}=\bm{\theta}_0}.
+\label{eq:loss_approximation}
+\end{align}
+
+Folglich führt eine kleine Strategieaktualisierung $\pi_{\bm{\theta}_0} \rightarrow \tilde{\pi}$, die die lokale Annäherung $L_{\pi_{\bm{\theta}_0}}$ verbessert, auch zu einer Verbesserung von $\eta$. Es stellt sich die Frage, in welchem Ausmaß die Strategieaktualisierung vorzunehmen ist. An dieser Stelle wählen die Autoren die maximale \textit{Kullback-Leibler}-Divergenz  
+$D_{\mathrm{KL}}^{\mathrm{max}}(\pi,\tilde{\pi}) = 
+\max_{\bm{s}} D_{\mathrm{KL}}(\pi(\cdot, \bm{s})\,\, || \, \tilde{\pi}(\cdot, \bm{s})$ 
+(KL-Divergenz), ein Maß für die Unterschiedlichkeit zweier Wahrscheinlichkeitsverteilungen, um die Abweichung von den parametrierten Strategien zu quantifizieren. Für zwei Wahrscheinlichkeitsdichtefunktionen $p$ und $q$ der Verteilungen $P$ und $Q$ lautet die KL-Divergenz 
+\begin{align}
+D(P\,||\,Q) = \int\limits_{-\infty}^{\infty} p(x)\cdot 
+\ln \left( \dfrac{p(x)}{q(x)} \right) \mathrm{d}x,
+\label{eq:kl-divergenz}
+\end{align}
+
+mit dem natürliche Logarithmus $\ln$. Als nächstes leiten die Autoren die folgenden Ungleichung her:
+\begin{align}
+\eta(\tilde{\pi}) \geq L_\pi(\tilde{\pi}) &- CD_{\mathrm{KL}}^{\mathrm{max}} (\pi, \tilde{\pi}), \nonumber \\
+\text{mit } C &= \dfrac{4\epsilon\gamma}{(1-\gamma)^2}, \nonumber \\
+\text{und } \epsilon &= \max\limits_{\bm{s},\bm{a}} | A_\pi(\bm{s},\bm{a}) | .
+\label{eq:trpo_theorem}
+\end{align}
+
+
+Der Beweis von \eqref{eq:trpo_theorem} wird an dieser Stelle nicht explizit aufgeführt wird, ist jedoch in der Veröffentlichung gegeben. Die Ungleichung verspricht eine monotone Verbesserung stochastischer Strategien:
+\begin{align*}
+\eta(\pi_0)\leq\eta(\pi_1)\leq\eta(\pi_2)\leq \dots \text{\,} .
+\end{align*}
+
+Um diesen Sachverhalt zu verdeutlichen definiert man
+$M_i(\pi)=L_{\pi_i}(\pi)-CD_{\mathrm{KL}}^{\mathrm{max}}(\pi_i,\pi)$ und folgert:
+\begin{align}
+&\eta(\pi_{i+1}) \geq M_i(\pi_{i+1}) \text{ aus Gleichung~}\eqref{eq:trpo_theorem},  \\
+&\eta(\pi_i) = M_i(\pi_i)\text{ daher } \nonumber \\
+&\eta(\pi_{i+1})-\eta(\pi_i) \geq M_i(\pi_{i+1})-M_i(\pi_i). \nonumber
+\label{eq:monotone_verbesserung}
+\end{align}
+
+Durch eine Maximierung von $M_i$ bei jeder Iteration wird sichergestellt, dass der erwartete Ertrag, die in RL zu maximierende Größe, $\eta$ nicht fällt. Diese Art von Algorithmus gehört zu den \textit{Minorization-Maximization}-Algorithmen. $M_i$ ist in diesem Zusammenhang die Ersatzfunktion (\textit{surrogate function}), die kleiner gleich als $\eta$ ist für $\pi_{i+1}$ und Gleichheit bei $\pi_i$ aufweist. 
+
+Aus den dargestellten theoretischen Erkenntnissen, wird der eigentliche Algorithmus TRPO für beliebig parametrierte Strategien abgeleitet. Man definiert in diesem Zusammenhang die zu verbessernden Parameter 
+$\bm{\theta}_{\mathrm{alt}}$ und stellt die Größen in Abhängigkeit von allgemeinen Parametern $\bm{\theta}$ anstatt der parametrierten Strategie $\pi_{\bm{\theta}}(\bm{a}|\bm{s})$ dar:
+$\eta(\bm{\theta}) \coloneqq \eta(\pi_{\bm{\theta}})$, 
+$L_{\bm{\theta}}(\tilde{\bm{\theta}})  \coloneqq L_{\pi_{\bm{\theta}}}(\pi_{\tilde{\bm{\theta}}})$ und
+$D_{\mathrm{KL}}(\bm{\theta}||\tilde{\bm{\theta}}) \coloneqq
+D_{\mathrm{KL}} (\pi_{\bm{\theta}}||\pi_{\tilde{\bm{\theta}}})$.
+Die Ungleichung~\eqref{eq:trpo_theorem} wird mit den angegebenen Definitionen umgeschrieben:
+$\eta(\bm{\theta}) \geq L_{\bm{\theta}_{\mathrm{alt}}}(\bm{\theta}) 
+- CD_{\mathrm{KL}}^{\mathrm{max}}(\bm{\theta}_{\mathrm{alt}}, \bm{\theta})$ 
+mit Äquivalenz bei $\bm{\theta} = \bm{\theta}_{\mathrm{alt}}$. Also kann der erwartete Ertrag $\eta$ verbessert werden, indem der folgende Ausdruck maximiert wird:
+\begin{align*}
+\mathrm{maximiere}\left[ L_{\bm{\theta}_{\mathrm{alt}}}(\bm{\theta}) 
+- CD_{\mathrm{KL}}^{\mathrm{max}}(\bm{\theta}_{\mathrm{alt}}, \bm{\theta}) \right].
+\end{align*}
+
+Anstelle der Bestrafung der lokalen Annäherung $L_{\bm{\theta}_{\mathrm{alt}}}(\bm{\theta})$ durch die maximale KL-Divergenz wird eine \textit{Trust Region} als Beschränkung für die Parameteraktualisierungen verwendet:
+\begin{align}
+&\underset{\bm{\theta}}{\mathrm{maximiere}}~L_{\bm{\theta}_{\mathrm{alt}}}(\bm{\theta}) \\
+&\text{mit der Nebenbedingung } D_{\mathrm{KL}}^{\mathrm{max}}(\bm{\theta}_{\mathrm{alt}}, \bm{\theta}) \leq \delta. \nonumber 
+\end{align}
+
+Der Parameter $\delta$ gibt an wie groß im Sinn der KL-Divergenz die Parameteraktualisierungen sein könne. Die Lösung der obigen Optimierung ist problematisch aufgrund der $\max$-Operation bei der Bestimmung der maximalen KL-Divergenz. Aus diesem Grund wird auf die durchschnittliche KL-Divergenz
+\begin{align*}
+\overline{D}_{\mathrm{KL}}^{\mathrm{\rho}}(\bm{\theta}_1, \bm{\theta}_2) \coloneqq
+\mathds{E}_{\bm{s}\sim\rho}\
+\left[ D_{\mathrm{KL}} (\pi_{\bm{\theta}_1}(\cdot|\bm{s})\,||\,(\pi_{\bm{\theta}_2}(\cdot|\bm{s})\right]
+\end{align*}
+
+zurückgegriffen. Mit der durchschnittlichen KL-Divergenz lautet das Optimierungsproblem:
+\begin{align}
+&\underset{\bm{\theta}}{\mathrm{maximiere}} ~L_{\bm{\theta}_{\mathrm{alt}}}(\bm{\theta}) \\
+&\text{mit der Nebenbedingung } \overline{D}_{\mathrm{KL}}^{\mathrm{\rho}_{\mathrm{alt}}}(\bm{\theta}_{\mathrm{alt}}, \bm{\theta}) \leq \delta. \nonumber 
+\label{eq:trpo_optimierung_allgemein}
+\end{align}
+
+Nach Einsetzen von 
+$L_{\bm{\theta}_{\mathrm{alt}}}(\bm{\theta})$
+erhält man:
+\begin{align}
+&\underset{\bm{\theta}}{\mathrm{maximiere}}~\sum\limits_{\bm{s}} \rho_{\bm{\theta}_{\mathrm{alt}}} (\bm{s})
+\sum\limits_{\bm{a}} \pi_{\bm{\theta}}(\bm{a}|\bm{s}) A_{\bm{\theta}_{\mathrm{alt}}}(\bm{s},\bm{a}) \\ \label{eq:trpo_optimierung_eingesetzt} \nonumber
+&\text{mit der Nebenbedingung } \overline{D}_{\mathrm{KL}}^{\mathrm{\rho}_{\mathrm{alt}}}(\bm{\theta}_{\mathrm{alt}}, \bm{\theta}) \leq \delta. 
+\end{align}
+
+Das allgemeine Optimierungsproblem~\eqref{eq:trpo_optimierung_eingesetzt} wird angepasst, damit es mit stichartig, generierten Trajektorien gelöst werden kann. Dafür wird als erstes 
+$\sum_{\bm{s}} \rho_{\bm{\theta}_{\mathrm{alt}}} (\bm{s})[\dots]$
+durch den Erwartungswert
+$\frac{1}{1-\gamma} \mathds{E}_{\bm{s}\sim\rho_{\bm{\theta}_{\mathrm{alt}}}} [\dots]$
+ersetzt. Anschließend wird der Vorteil $A_{\bm{\theta}_{\mathrm{alt}}}$ in der Kostenfunktion durch den Zustand-Aktion-Wert $Q_{\bm{\theta}_{\mathrm{alt}}}$ ersetzt, was die Kostenfunktion nur konstant ändert. Zuletzt wird die Summe über alle Aktionen durch eine Stichprobenentnahme nach Wichtigkeit (\textit{importance sampling}) $\frac{\pi_{\bm{\theta}}(\bm{a}|\bm{s})}
+{\pi_{\bm{\theta}_{\mathrm{alt}}}(\bm{a}|\bm{s})}$ ersetzt. Die Stichprobenentnahme nach Wichtigkeit beschreibt allgemein die Schätzung von Werten einer Verteilung, wobei man nur Stichproben einer anderen Verteilung besitzt. In diesem Fall werden Werte der alten Paremetrierung~$\bm{\theta}_{\mathrm{alt}}$ verwendet, mit welcher Trajektorien generiert werden, um Werte der aktualisierten Parameter $\bm{\theta}$ zu schätzen.
+Das Optimierungsproblem lautet schließlich:
+\begin{align}
+&\underset{\bm{\theta}}{\mathrm{maximiere}}~
+\mathds{E}_{\bm{s}\sim\rho_{\bm{\theta}_{\mathrm{alt}}}, 
+\bm{a}\sim \pi_{\bm{\theta}_{\mathrm{alt}}}} 
+\left[
+\dfrac{\pi_{\bm{\theta}}(\bm{a}|\bm{s})}
+{\pi_{\bm{\theta}_{\mathrm{alt}}}(\bm{a}|\bm{s})}
+Q_{\bm{\theta}_{\mathrm{alt}}}(\bm{s},\bm{a})
+\right] \\
+&\text{mit der Nebenbedingung}~ 
+\mathds{E}_{\bm{s}\sim\rho_{\bm{\theta}_{\mathrm{alt}}}}
+\left[ D_{\mathrm{KL}}(\pi_{\bm{\theta}_{\mathrm{alt}}}(\cdot|\bm{s})) \, || \,
+\pi_{\bm{\theta}}(\cdot|\bm{s}) \right] \leq \delta. \nonumber
+\label{eq:trpo_optimierung_samplebased}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%unterschiedliche Darstellungen der Zielpositoin\\
+%$\bm{x}_{\mathrm{E,P}}$\\
+%$\bm{x}_{\mathrm{E,p}}$\\
+%$\bm{x}_{\mathrm{E_{P}}}$\\
+%$\bm{x}_{\mathrm{E_{p}}}$
+
+
+
+
+\vspace{10cm}
+\cite{ADBB17}
+
+
+Zusammenfassung: RL gut geeignet für sequentielle Probleme, wo die Abfolge von Aktionen ein gewisses Ziel zur Folge hat. Für den zeitunabhängigen Zusammenhang der inversen Kinematik nicht geeignet. 

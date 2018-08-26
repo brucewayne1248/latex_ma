@@ -156,36 +156,6 @@
 %\newunicodechar{ }{~}
 
 
-%---------------------------------------------------------------
-% Andreas Serov hinzugefügte Pakete
-%---------------------------------------------------------------
-\usepackage{bm}					% bold math symbols
-\usepackage{tikz}				% graphics via tikz
-
-% custom colors
-\definecolor{imesblue}{rgb}{0.00000,0.313725,0.607843}			
-\definecolor{imesorange}{rgb}{0.90588235,0.48235,0.160784}
-\definecolor{imesgreen}{rgb}{0.784313,0.82745,0.090196}%
-%% tikz libraries und styles, die allgemein für Grafiken verwendet werden
-\usetikzlibrary{shapes,arrows, positioning}
-% kreis, rechteck und pfeil mit in imesblau
-\tikzstyle{simplecircle} = [draw, circle, node distance=2.5cm, line width=3pt, color=imesblue]
-\tikzstyle{simplebox} = [draw, rectangle, node distance=2.5cm, line width=3pt, color=imesblue, rounded corners]
-\tikzstyle{simplearrow} = [draw, -latex, line width=2pt, color=imesblue]
-
-\usepackage{lipsum} 			% zum Einfügen von Paragraphen von text
-\usepackage{wrapfig}			% Bild und Textfluss, gibt wohl bessere Alternativen
-
-\usepackage{subcaption}		% für subfigures, package "subfigure" deprecated
-
-\usepackage{gensymb}
-
-%---------------------------------------------------------------
-% Andreas Serov hinzugefügte Kommandos
-%---------------------------------------------------------------
-\newcommand{\shortminus}{\scalebox{0.75}[1.0]{\,\( - \)\,}}
-\newcommand{\shortequal}{\,{=}\,}
-
 %\DeclareUnicodeCharacter{00A0}{~}
 
 
@@ -208,7 +178,7 @@
 \fi
 % von wo sollen die Grafiken kommen?
 
-\graphicspath{{./bilder/}{./bilder/kinematik/}{./bilder/standdertechnik/}}
+\graphicspath{{./bilder/}{./bilder/kinematik/}{./bilder/standdertechnik/}{./bilder/titel/}{./bilder/erlernen/}}
 
 %\graphicspath{{./bilder/titel}}
 %\graphicspath{{./bilder/einleitung}}
@@ -500,3 +470,50 @@
 
 \usepackage[right]{eurosym}
 
+%---------------------------------------------------------------
+% Andreas Serov hinzugefügte Pakete
+%---------------------------------------------------------------
+\usepackage{bm}					% bold math symbols
+\usepackage{tikz}				% graphics via tikz
+
+\usepackage{lipsum} 			% zum Einfügen von Paragraphen von text
+\usepackage{wrapfig}			% Bild und Textfluss, gibt wohl bessere Alternativen
+
+\usepackage{subcaption}		% für subfigures, package "subfigure" deprecated
+
+\usepackage{gensymb}
+
+\usepackage{dsfont}				% für mathematische Buchstaben wie Erwartungswert E oder reelle Zahlen R
+\usepackage{algorithm}			% for algorithm environment - caption, label, etc
+%\usepackage{algorithmicx}
+\usepackage{algpseudocode}		% for algorithmic environment
+\floatname{algorithm}{Algorithmus} % Algorithm in Algorithmus umbenennen in algorithm environment
+
+\usepackage{mathtools}	% \coloneeqq := 
+
+%\usepackage{float} % zum exakten Platzieren von Bildern etc
+
+%---------------------------------------------------------------
+% Andreas Serov tikz befehle und Farben
+%---------------------------------------------------------------
+% custom colors
+\definecolor{imesblue}{rgb}{0.00000,0.313725,0.607843}			
+\definecolor{imesorange}{rgb}{0.90588235,0.48235,0.160784}
+\definecolor{imesgreen}{rgb}{0.784313,0.82745,0.090196}%
+%% tikz libraries und styles, die allgemein für Grafiken verwendet werden
+\usetikzlibrary{shapes,arrows, positioning}
+% kreis, rechteck und pfeil mit in imesblau
+\tikzstyle{simplecircle} = [draw, circle, node distance=2.5cm, line width=3pt, color=imesblue]
+\tikzstyle{simplebox} = [draw, rectangle, node distance=2.5cm, line width=3pt, color=imesblue, rounded corners]
+\tikzstyle{simplearrow} = [draw, -latex, line width=2pt, color=imesblue]
+
+%---------------------------------------------------------------
+% Andreas Serov hinzugefügte Kommandos
+%---------------------------------------------------------------
+\newcommand{\shortminus}{\scalebox{0.75}[1.0]{\,\( - \)\,}} % kurzes minuszeichen
+\newcommand{\shortequal}{\,{=}\,}	% = zeichen mit weniger abstant
+
+\DeclareMathOperator*{\argmin}{argmin} % \argmin operator
+\DeclareMathOperator*{\argmax}{argmax} % \argmax operator
+
+\renewcommand{\algorithmicrequire}{\textbf{Eingang:}} % Eingang: anstatt englisches Require
